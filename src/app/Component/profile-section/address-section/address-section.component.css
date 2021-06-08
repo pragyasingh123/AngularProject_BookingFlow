@@ -1,0 +1,81 @@
+.address-section-component-wrapper {
+    background: #fff;
+}
+
+.preferences-box {
+    border: 1px solid #e9f0f5
+}
+
+.address-section-component-wrapper h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.address-section-component-wrapper .add-address-btn-block  button {
+    color: #52b6de;
+    border: 1px solid #52b6de;
+    line-height: 33px;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0.45rem;
+}
+.address-section-component-wrapper .new-address-block {
+    border-right: 1px solid #e9f0f5;
+    padding: 1rem 1.5rem;
+}
+
+.address-section-component-wrapper .new-address-block .add-title {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.address-section-component-wrapper .new-address-block .new-address {
+    width: 65%;
+}
+
+.edit-icon {
+    background: url(/assets/images/edit-icon.svg) no-repeat center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.trash-icon {
+    background: url(/assets/images/trash-icon.svg) no-repeat center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+/* CSS for address section on review and buy page */
+.address-section-component-wrapper.address-section-bx-review-buy {
+    background: transparent;
+}
+.address-section-component-wrapper.address-section-bx-review-buy  h3.sub-title
+{
+    background-color: transparent;
+    padding: 0.7rem 0;
+}
+.address-section-bx-review-buy .preferences-box 
+{
+    border: none;
+}
+.address-section-bx-review-buy  .preferences-box .new-address-block:first-child
+{
+padding-left: 0;
+}
+.address-section-bx-review-buy  .preferences-box .new-address-block:last-child
+{
+padding-right: 0;
+}
+ .address-section-bx-review-buy .address-section-component-wrapper .add-address-btn-block button
+ {
+right: 0;
+ }
+ .address-section-bx-review-buy .address-section-component-wrapper .address-title
+ {
+    visibility: hidden;
+ }

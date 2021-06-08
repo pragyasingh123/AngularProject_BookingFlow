@@ -1,0 +1,62 @@
+<div class="seating-preferences-wrapper myprefrences-container">
+    <!-- seating prefrences -->
+    <div class="row no-gutters mb-3">
+        <div class="col-12">
+            <div class="preferences-box">
+                <h3 class="sub-title">Seating Prefrences</h3>
+                <div class="seating-pref-info">
+                    <p class="mb-0">You can reserve a seat, please select your option</p>
+                    <p class="font-italic pb-3 border-bottom">Seating options are not available with all train
+                        companies. We'll meet your requirements whenever possible.</p>
+                </div>
+
+                <div class="preferences-content-details">
+                    <div class="fare-block mb-3">
+                        <label class="prefseat-lbl">Preferred Seats</label>
+                        <label class="tkt-pref-lbl">Facing</label>
+                        <mat-radio-group class="tkt-pref-radio-group">
+                            <mat-radio-button value="1" [checked]="true">No preference
+                            </mat-radio-button>
+                            <mat-radio-button value="2">Backwards</mat-radio-button>
+                            <mat-radio-button value="3">Forwards</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                    <div class="fare-block mb-3">
+
+                        <label class="tkt-pref-lbl">Position</label>
+                        <mat-radio-group class="tkt-pref-radio-group">
+                            <mat-radio-button value="1" [checked]="true">No preference
+                            </mat-radio-button>
+                            <mat-radio-button value="2">Aisle</mat-radio-button>
+                            <mat-radio-button value="3">Window</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                    <div class="fare-block mb-3">
+
+                        <label class="tkt-pref-lbl">Seat Type</label>
+                        <mat-radio-group class="tkt-pref-radio-group">
+                            <mat-radio-button value="1" [checked]="true">No preference
+                            </mat-radio-button>
+                            <mat-radio-button value="2">Individual</mat-radio-button>
+                            <mat-radio-button value="3">Table</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                    <div class="fare-block mb-3 border-top pt-3">
+                        <label class="prefseat-lbl">Preferred Coach</label>
+
+                        <mat-radio-group class="tkt-pref-radio-group">
+                            <mat-radio-button value="1" [checked]="true">No preference
+                            </mat-radio-button>
+                            <mat-radio-button value="2">Quiet Coach</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+</div>

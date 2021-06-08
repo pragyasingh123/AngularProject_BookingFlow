@@ -1,0 +1,91 @@
+<div class="modal-popup-container add-address">
+    <div class="card-heading">
+        <h1>Add New Address</h1>
+        <mat-dialog-actions class="close-btn">
+            <span class="material-icons" mat-dialog-close>clear</span>
+        </mat-dialog-actions>
+    </div>
+    <form [formGroup]="addressForm" (ngSubmit)="submitData()">
+        <div class="card-content">
+            <div class="row">
+
+                <div class="col-sm-6 pb-4">
+                    <label>Postcode <span class="requirefield">*</span></label>
+
+                    <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                        <input matInput placeholder="Enter postcode" value="" formControlName="postcode" required>
+                        <div *ngIf="addressForm.get('postcode').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6 pb-4">
+                    <label>First Line <span class="requirefield">*</span></label>
+                    <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                        <input matInput placeholder="Enter first line" value="" formControlName="firstlineAddress"
+                            required>
+                        <div *ngIf="addressForm.get('firstlineAddress').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6 pb-4">
+                    <label>Second Line</label>
+                    <mat-form-field floatLabel="never" class="fix-selectfield">
+                        <!-- <mat-label>Enter Second Line</mat-label>
+                <mat-select>
+                    <mat-option>Option 1</mat-option>
+                    <mat-option value="option2">Option 2</mat-option>
+                    <mat-option value="option3">Option 3</mat-option>
+                </mat-select> -->
+                        <input matInput placeholder="Enter first line" value="" formControlName="secondlineAddress"
+                            required>
+                        <div *ngIf="addressForm.get('secondlineAddress').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6 pb-4">
+                    <label>Third Line</label>
+                    <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                        <input matInput placeholder="Enter third line" value="" formControlName="thirdlineAddress"
+                            required>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6 pb-4">
+                    <label>City/Town <span class="requirefield">*</span></label>
+                    <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                        <input matInput placeholder="Enter city/town" value="" formControlName="city" required>
+                        <div *ngIf="addressForm.get('city').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6 pb-4">
+                    <label>Country</label>
+                    <mat-form-field floatLabel="never" class="fix-selectfield">
+                        <mat-label>Select Country</mat-label>
+                        <mat-select formControlName="country" (selectionChange)="changecountry($event)">
+                            <mat-option *ngFor="let country of countryNames" value="country">{{country}}
+                            </mat-option>
+                        </mat-select>
+                        <div *ngIf="addressForm.get('country').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </mat-form-field>
+
+                </div>
+
+
+
+
+            </div>
+                <div class="modal-footer">
+                    <!-- <button mat-button class="cancelBtn mr-3">Cancel</button> -->
+                    <button mat-button class="saveBtn" type="submit">Create</button>
+                </div>
+            <div *ngIf="ErrorFromApi">{{ErrorMessage}}</div>
+
+        </div>
+    </form>
+</div>

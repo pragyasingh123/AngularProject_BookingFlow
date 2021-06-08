@@ -1,0 +1,89 @@
+.background-banner {
+    background: url(/assets/images/myprofile-bgr.png) no-repeat center;
+    height: 340px;
+    width: 100%;
+}
+
+.background-banner .welcome-wrapper {
+    position: absolute;
+    top: 125px;
+    left: 13%;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 50px;
+}
+.profile-body {
+    background: #fff;
+    border-top: 5px solid #f5d83c;
+    border-radius: 0.2rem;
+    position: relative;
+    top: -60px;
+    padding: 7px 30px 0;
+}
+
+.profile-body::after {
+    content: "";
+    position: absolute;
+    border-bottom: 25px solid #eff4f8;
+    display: block;
+    top: 55px;
+    left: 0;
+    width: 100%;
+}
+
+.profile-body .mat-tab-group {
+    position: relative;
+}
+
+.profile-body .profile-tab-buy-ticket-btn {
+    position: absolute;
+    top: 3px;
+    right: 17px;
+    z-index: 1;
+}
+
+.booking-profile-tab.mat-tab-group.mat-primary .mat-ink-bar {
+    height: 0px;
+    background-color: #0092cb;
+}
+
+.booking-profile-tab .mat-tab-label.mat-tab-label-active {
+    color: #1199ce;
+    border-bottom: 5px solid #0092cb;
+    opacity: 1;
+    min-width: auto;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.booking-profile-tab .mat-tab-label {
+    min-width: auto;
+    border-bottom: 5px solid #fff;
+    opacity: 1;
+    font-size: 0.91rem;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.profile-body .mat-flat-button.mat-primary {
+    background-color: #f5d83c;
+    color: #000;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.booking-profile-tab .mat-tab-header {
+    border-bottom: 0;
+}
+
+.booking-profile-tab .mat-tab-body-wrapper {
+    padding-top: 50px;
+}
+
+.profile-body .mat-flat-button.trip-buy-btn {
+    background-color: #0092cb;
+    color: #fff;
+    padding: 0 2rem;
+    float: right;
+}

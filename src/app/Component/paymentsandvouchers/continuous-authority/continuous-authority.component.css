@@ -1,0 +1,70 @@
+.continuous-authority-wrapper {
+    background: #fff;
+}
+
+.authority-block .delivery-preferences-accordion-container {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.authority-block .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-panel-header {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+    height: 50.4px !important;
+}
+
+.authority-block .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-panel-header .auth-title {
+    background: url(/assets/images/info-icon.svg) no-repeat right;
+    width: 180px;
+    background-size: 23px;
+    padding: 3px;
+}
+
+.authority-block .delivery-preferences-accordion-container .mat-expansion-panel.mat-expanded {
+    border: 1px solid #e9f0f5;
+}
+
+.authority-block .continuous-info {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-panel-header label {
+    margin-bottom: 0;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mat-expanded .mat-expansion-indicator {
+    display: none;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-indicator {
+    background: url(/assets/images/maximize-icon.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: block;
+    transform: none !important;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-indicator::after {
+    display: none !important;
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
+    background: #e9f0f5;
+}
+
+.continuous-authority-wrapper .mat-expansion-panel {
+    border-radius: 0 !important;
+}
+
+.authority-block .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-panel-header .auth-title {
+    background: url(/assets/images/info-icon.svg) no-repeat right;
+    width: 180px;
+    background-size: 23px;
+    padding: 3px;
+}

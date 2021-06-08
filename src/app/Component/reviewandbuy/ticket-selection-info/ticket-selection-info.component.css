@@ -1,0 +1,93 @@
+.info-filter
+{
+margin: 20px 0;
+}
+.info-filter .radio-option-group-box
+{
+    display: flex;
+    padding-bottom: 10px;
+}
+.info-filter .info-tooltip
+{
+    display: inline-block;
+    padding-right: 3rem;
+
+}
+.info-tooltip mat-icon
+{
+    font-size: 20px;
+    color: rgba(0,0,0, 0.6);
+    padding-left: 6px;
+    height: auto;
+}
+.info-tooltip mat-icon:hover
+{
+    cursor: pointer;
+}
+.ticket-filter-block.info-filter .mat-radio-group .mat-radio-button
+{
+padding-right: 0;
+}
+.info-filter  mat-radio-button, .info-filter mat-icon
+{
+    display: inline-block;
+    vertical-align: middle; 
+}
+.showmoreEticket
+{
+    color: #0092CB;
+    font-size: 16px;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+.showmoreEticket:hover
+{
+    cursor: pointer;
+}
+.btn-update-cust
+{
+    background: #0092CB;
+    padding: 0 1rem;
+    color: #fff;
+    border: 1px solid #0092CB;
+    min-width: 115px;
+    position: absolute !important;
+    right: 10px;
+    bottom: 10px;
+}
+.ticket-filter-block button.hideDefaultSlctn {
+    padding: 0;
+    min-width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 30px;
+    background-color: #061B2B;
+    height: 30px;
+    width: 40px;
+    border-radius: 0;
+    outline: none;
+}
+.ticket-filter-block button.hideDefaultSlctn img {
+    transition: 0.3s;
+}
+@media(max-width:1024px)
+{
+    .btn-update-cust
+    {
+        position: static !important;
+        right: unset;
+        bottom: unset;
+        width: 100%;
+    }
+    .ticket-filter-block.info-filter .mat-radio-group .mat-radio-button
+    {
+     min-width: auto;
+     margin-bottom: 0;
+    }
+    .ticket-filter-block.info-filter .info-tooltip
+    {
+    margin-bottom: 10px;
+    padding-right: 2rem;
+    }
+}

@@ -1,0 +1,26 @@
+.sorting-headers
+{
+    padding: 0;
+    margin-bottom: 0;
+}
+.sorting-headers li
+{
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    background-color: #c7dae7;
+    padding: 7px 15px;
+    border-radius: 20px;
+    color: #061b2b;
+    font-size: 15px;
+}
+.sorting-headers li:hover
+{
+    background-color: #0092CB;
+    color: #fff;
+}
+.footer-action button
+{
+    background-color: #0092CB;
+    color: #fff; 
+}

@@ -1,0 +1,78 @@
+<!-- personal detail -->
+<div class="personal-detail-component-wrapper myprefrences-container">
+    <div class="row no-gutters">
+        <div class="col-12">
+            <h2 class="sub-title">My Profile</h2>
+        </div>
+    </div>
+    <div class="row no-gutters mb-3">
+        <div class="col-12 col-sm-6">
+            <div class="myprofile-det-box">
+                <!--  -->
+                <h3 class="sub-title">Personal Details <span class="personal-detail-block-btn">
+                        <button mat-button>Edit</button>
+                    </span></h3>
+                <!--  -->
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 personal-detail-block">
+                        <ul class="pers-details-list">
+                            <li>
+                                <p class="pers-lbl">Name</p>
+                                <p class="pers-info">{{customerData.firstname}}</p>
+                            </li>
+                            <li>
+                                <p class="pers-lbl">Email</p>
+                                <p class="pers-info">{{customerData.email}}</p>
+                            </li>
+                            <li>
+                                <p class="pers-lbl">Mobile Number</p>
+                                <p class="pers-info">+91 2345698712</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-sm-6">
+            <div class="myprofile-det-box equalheight">
+                <!--  -->
+                <h3 class="sub-title">Change Password <span class="personal-detail-block-btn">
+                        <button mat-button (click)="openPasswordResetPage()">Edit</button>
+                    </span></h3>
+                <!--  -->
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 personal-detail-block">
+                        <ul class="pers-details-list">
+                            <li class="mb-0">
+                                <p class="pers-lbl">Password</p>
+                                <p class="pers-info">**********</p>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="myprofile-det-box equalheight mt-3">
+                <!--  -->
+                <h3 class="sub-title">Account Closure<span class="personal-detail-block-btn">
+                        <button mat-button>Edit</button>
+                    </span></h3>
+                <!--  -->
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 personal-detail-block">
+                        <p class="close-acc-link mb-0">If you wish to delete your account, you can do so by <a
+                                href="#">clicking here</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- end -->

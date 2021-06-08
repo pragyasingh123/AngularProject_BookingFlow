@@ -1,0 +1,70 @@
+.home-station-block-component-wrapper {
+    background: #fff;
+}
+
+.preferences-box {
+    border: 1px solid #e9f0f5
+}
+
+.home-station-block {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-station-block .facility-block ul {
+    margin-bottom: 0;
+}
+
+.home-station-block .facility-block ul li {
+    margin-left: 2rem;
+}
+
+.home-station-block-component-wrapper h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.home-station-block-component-wrapper .add-address-btn-block button {
+    color: #52b6de;
+    border: 1px solid #52b6de;
+    line-height: 33px;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0.45rem;
+}
+
+.carpark-icon {
+    background: url("/assets/images/carpark-icon.svg") no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+
+.wifi-icon {
+    background: url("/assets/images/wifi-icon.svg") no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+
+.expansion-icon {
+    background: url("/assets/images/expansion-icon.svg") no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: 5px;
+}

@@ -1,0 +1,21 @@
+<div class="modal-popup-container">
+    <div class="card-heading">
+        <!-- <h1>Confirmation</h1> -->
+        <img src="../../../assets/images/logo-mobile.png">
+        <mat-dialog-actions class="close-btn">
+            <span class="material-icons" mat-dialog-close>clear</span>
+        </mat-dialog-actions>
+    </div>
+    <mat-dialog-content>
+        <div class="shadow-none font-weight-500">
+            {{message}}
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions *ngIf="!isLoggedIn" align="center" class="bt-1">
+        <button mat-button class="default-btn" mat-button mat-dialog-close (click)="onContinue()">Continue</button>
+        <button mat-button class="default-btn" mat-button mat-dialog-close (click)="onCancel()">Cancel</button>
+    </mat-dialog-actions>
+    <mat-dialog-actions *ngIf="isLoggedIn" align="center" class="bt-1">
+        <button mat-button class="default-btn" mat-button mat-dialog-close>Ok</button>
+    </mat-dialog-actions>
+</div>

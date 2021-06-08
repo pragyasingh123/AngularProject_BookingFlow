@@ -1,0 +1,92 @@
+.booking-ticket-block-wrapper {
+    background: #fff;
+}
+
+.booking-detail-block {
+    border: 1px solid #e9f0f5;
+    margin-bottom: 1rem;
+}
+
+.booking-detail-block .trip-detail-container {
+    background: #e9f0f5;
+    padding: 35px 20px 25px;
+    position: relative;
+}
+
+.booking-detail-block .trip-detail-container .badge-container {
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+
+.booking-detail-block .trip-detail-container .badge-upcoming {
+    background: #04c4c4;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom-right-radius: 0.3rem;
+    padding: 3px 14px;
+    font-size: 0.73rem;
+    font-weight: 500;
+}
+
+.booking-detail-block .trip-detail-container .badge-fav {
+    background: #eb6464;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    padding: 3px 14px;
+    font-size: 0.73rem;
+    font-weight: 500;
+    margin-left: 0.4rem;
+}
+
+.booking-detail-block .trip-detail-container .badge-travelled {
+    background: #a9a9aa;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom-right-radius: 0.3rem;
+    padding: 3px 14px;
+    font-size: 0.73rem;
+    font-weight: 500;
+}
+
+.booking-detail-block .trip-detail-container .badge-fav .material-icons {
+    font-size: 0.8rem;
+    position: relative;
+    top: 2px;
+}
+
+.booking-detail-block .trip-detail-container .date {
+    display: inline-block;
+    font-size: 3rem;
+    width: 40%;
+}
+
+.booking-detail-block .trip-detail-container .day-year {
+    display: inline-block;
+    width: 60%;
+}
+
+.booking-detail-block .trip-detail-container p {
+    margin-bottom: 0;
+    font-weight: lighter;
+}
+
+.booking-detail-block .trip-detail-container p:first-child {
+    font-weight: 500;
+}
+
+.booking-detail-block .trip-detail-footer {
+    background: #fff;
+    padding: 15px 20px;
+}
+
+.booking-detail-block .trip-detail-footer .view-booking-btn, .booking-detail-block .trip-detail-footer .print-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    min-width: 125px;
+    line-height: 30px;
+    margin-left: 1rem;
+}

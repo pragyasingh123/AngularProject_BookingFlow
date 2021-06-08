@@ -1,0 +1,29 @@
+.preferred-smartcard-wrapper {
+	background: #fff;
+}
+
+.myprefrences-container .preferences-box {
+	border: 1px solid #e9f0f5;
+}
+
+.preferred-smartcard-wrapper.myprefrences-container h3.sub-title {
+	background: #e9f0f5;
+	padding: 0.7rem 1.5rem;
+	font-weight: 500;
+	font-size: 0.95rem;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.myprefrences-container .preferences-content-details {
+	padding: 0.7rem 1.5rem;
+}
+
+.myprefrences-container .buy-ticket-block {
+	display: block;
+	width: 70%;
+}
+
+.preferred-smartcard-wrapper .mat-form-field-infix {
+	border-top: .84375em solid transparent !important;
+}

@@ -1,0 +1,61 @@
+<div class="ticket-filter-block info-filter" [ngClass]="{'active': showtickets}">
+    <button mat-button class="hideDefaultSlctn" (click)="clickEvent()"><img
+            src="../../../../assets/images/arrow.png"></button>
+    <p class="tkt-txt">Your default ticket delivery preference is
+        <span class="tkt-txt-bold">eTicket. </span>Would you like to change it?
+    </p>
+    <div class="radio-option-block etickets">
+        <div class="radio-option-group-box">
+            <mat-radio-group aria-label="Select an option">
+                <div class="info-tooltip">
+                    <mat-radio-button value="1">eTicket</mat-radio-button>
+                    <mat-icon [ngbTooltip]="tipContent1">info_outline</mat-icon>
+                    <ng-template #tipContent1 tooltipClass="tooltipstyle">
+                        Mobile eTicket - available on single and return fares</ng-template>
+                </div>
+                <div class="info-tooltip">
+                    <mat-radio-button value="2">Smart Card</mat-radio-button>
+                    <mat-icon [ngbTooltip]="tipContent2"
+                    >info_outline</mat-icon>
+                    <ng-template #tipContent2 tooltipClass="tooltipstyle">
+                        Mobile eTicket - available on single and return fares</ng-template>
+                </div>
+                <div class="info-tooltip">
+                    <mat-radio-button value="3">Collect From Station</mat-radio-button>
+                    <mat-icon [ngbTooltip]="tipContent3"
+                    >info_outline</mat-icon>
+                    <ng-template #tipContent3 tooltipClass="tooltipstyle">
+                        Mobile eTicket - available on single and return fares</ng-template>
+                </div>
+                </mat-radio-group>
+            <span class="showmoreEticket" (click)="lessmore()">{{moreEticket}}</span>
+        </div>
+       
+        <div class="radio-option-group-box" *ngIf = "show2">
+            <mat-radio-group aria-label="Select an option">
+                <div class="info-tooltip">
+                    <mat-radio-button value="1">eTicket</mat-radio-button>
+                    <mat-icon [ngbTooltip]="tipContent1"
+                    >info_outline</mat-icon>
+                    <ng-template #tipContent1 tooltipClass="tooltipstyle">
+                        Mobile eTicket - available on single and return fares</ng-template>
+                </div>
+                <div class="info-tooltip">
+                    <mat-radio-button value="2">Smart Card</mat-radio-button>
+                    <mat-icon [ngbTooltip]="tipContent2"
+                    >info_outline</mat-icon>
+                    <ng-template #tipContent2 tooltipClass="tooltipstyle">
+                        Mobile eTicket - available on single and return fares</ng-template>
+                </div>
+                <div class="info-tooltip">
+                    <mat-radio-button value="3">Collect From Station</mat-radio-button>
+                    <mat-icon [ngbTooltip]="tipContent3"
+                    >info_outline</mat-icon>
+                    <ng-template #tipContent3 tooltipClass="tooltipstyle">
+                        Mobile eTicket - available on single and return fares</ng-template>
+                </div>
+            </mat-radio-group>
+        </div>
+        <button mat-flat-button class="btn-update-cust">Update</button>
+    </div>
+</div>

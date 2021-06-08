@@ -1,0 +1,110 @@
+<div class="trainschcontainer">
+    <div class="header-section">
+        <h1>Route Details</h1>
+
+        <mat-dialog-actions>
+            <div class="headerclose-btn" [mat-dialog-close]="true">
+                <span>&times;</span>
+            </div>
+        </mat-dialog-actions>
+    </div>
+    <div *ngIf="IsErrorinResponse" class="alert-section">
+        <span class="material-icons"> warning </span> <span class="alert-msg">
+            {{ErrorMessage}}</span>
+        <!-- <button align="center"  mat-button class="saveBtn mr-3">Refresh</button> -->
+    </div>
+    <mat-list role="list" class="duration-details">
+        <mat-list-item role="listitem"><span class="duration-details-border-right">Duration <span>
+              {{duration | hoursMins}} | Changes {{changes}}</span></span></mat-list-item>
+              <div class="emision-txt"> <a href="#">Carbon emissions</a></div>
+      </mat-list> 
+  <div *ngIf="!IsErrorinResponse">
+    <div class="trainsch-body-container"  *ngFor="let change of traveLChanges; last as isOuterLast;let indexOfelement=index">
+        <div class="trainsch-left-box">
+           
+             <ng-container *ngIf="change.callingPoints.length >2 ; then ShowCallPoint"></ng-container>
+             <ng-template #ShowCallPoint>
+            <div class="callingpoints">
+                <div class="points-chkbx">
+                    <mat-checkbox (change)="onChangeCallingPoints($event.checked,change)">Show all calling points</mat-checkbox>
+                </div>
+               
+            </div>
+             </ng-template>
+             
+            <div class="train-timeline-box">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th>Arrival</th>
+                        <th>Departure</th>
+                        <th> <span class="train-name">{{change.tocDesc}}</span> </th>
+                    </tr>
+                   
+                    <tr  *ngFor="let route of change.callingPoints; first as isFirst; last as isLast">
+                 
+                        <ng-container *ngIf="isFirst || (isLast && !isOuterLast)  ||  (change.callingPoints.showCallingPoints && !isLast); then ShowCallingPoints"></ng-container>
+                        <ng-container *ngIf=" isOuterLast && isLast;  then ShowCallingPointsLast"></ng-container>
+                        <ng-template #ShowCallingPointsLast>  
+                             <td><span class="correct-time"> {{route.arrivalDateTime | date:'HH:mm'}} </span> </td>  
+                             <td><span class="end-no-time"> </span> </td>
+                        </ng-template>
+                        <ng-template #ShowCallingPoints> 
+                        <td><span class="correct-time"> {{route.arrivalDateTime | date:'HH:mm'}} </span> </td>  
+                         <td><span class="correct-time"> {{route.departureDateTime | date:'HH:mm'}} </span> </td>  
+                        </ng-template>
+                                <ng-container *ngIf="!isFirst && !isLast &&  change.callingPoints.showCallingPoints; then Light"></ng-container>
+                                <ng-container *ngIf="isFirst; then DarkStart"></ng-container>
+                                <ng-container *ngIf="isLast; then DarkEnd"></ng-container>
+                               
+                                
+                                  <ng-template #DarkStart>
+                                    <td><span  class="station-name start"> {{route.station}} </span></td>
+                                  </ng-template>
+                                  <ng-template #DarkEnd>
+                                    <td><span  class="station-name end"> {{route.station}} </span></td>
+                                  </ng-template>
+                                  <ng-template #Light>
+                                    <td><span  class="station-name"> {{route.station}} </span></td>
+                                  </ng-template>
+
+   
+                </table>
+
+            </div>
+
+        </div>
+        <div class="trainsch-right-box">
+            <h2>Facilities</h2>
+            <ul>
+                <li><span class="reserv-icon"></span>{{change.reservation}}</li>
+                <li><span class="type-icon"></span>{{change.sClass}}</li>
+                <ng-container *ngIf="change.trolley=='1' then ShowTrolley"></ng-container>
+                <ng-container *ngIf="change.buffetcar=='1' then ShowBuffetCar"></ng-container>
+                <ng-container *ngIf="change.showWifi=='1' then ShowWifi"></ng-container>
+               
+               
+                <ng-template #ShowTrolley><li><span class="trolley-icon"></span>Trolley</li></ng-template>
+                <ng-template #ShowBuffetCar><li><span ></span>Buffet</li></ng-template>
+                <ng-template #ShowWifi><li><span ></span>Wifi</li></ng-template>
+            </ul>
+
+        </div>
+    </div>
+  </div>
+ <div *ngIf="IsErrorinResponse">
+    <div class="train-timeline-box">
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <th  class="train-name">Departure</th>
+                <th  class="train-name">Arrival</th>                
+            </tr>
+            <tr>
+                 <td><span  class="station-name start"> {{SourceStation}} </span></td>
+                <td><span  class="station-name start"> {{DestinationStation}} </span></td>
+            </tr>
+        </table>
+    </div>
+ </div>
+
+
+</div>

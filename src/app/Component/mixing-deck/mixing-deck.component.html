@@ -1,0 +1,86 @@
+
+<div class="modify-search-block">
+  <div class="container">
+    <div class="search-control">
+      <mat-form-field class="example-full-width" floatLabel="never" appearance="none">
+        <input matInput placeholder="Departing from..." value="" (click)="openmyDialog()"
+          [(ngModel)]="searchRequest.DepartureLocationName">
+      </mat-form-field>
+    </div>
+    <div class="exch-btn-wrapper">
+      <button mat-icon-button aria-label="" mat-button (click)="onChangeStationsSearch()">
+        <mat-icon>swap_horiz</mat-icon>
+      </button>
+    </div>
+    <div class="search-control">
+      <mat-form-field class="example-full-width" floatLabel="never" appearance="none">
+        <input matInput placeholder="Going to..." value="" (click)="openmyDialog()"
+          [(ngModel)]="searchRequest.ArrivalLocationName">
+      </mat-form-field>
+    </div>
+    <div class="txt-note">
+      <p>{{journeyType}} journey for {{passengerDetailLabel}}</p>
+    </div>
+    <div class="btn-modify-cust">
+      <button mat-stroked-button (click)="openmyDialog()">Modify</button>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="progress-step-block">
+
+      <ul id="progressbar" class="text-center">
+        <li class="active" id="step1">
+          <div>Enter Journey</div>
+        </li>
+        <li class="active" id="step2">
+          <div>Choose Train</div>
+        </li>
+        <li class="" id="step3">
+          <div>Choose Ticket</div>
+        </li>
+        <li class="" id="step4">
+          <div>Review & Buy</div>
+        </li>
+
+      </ul>
+      <button mat-stroked-button class="btn-help-cust"  (click)="showhelp()">{{buttonName}}</button>
+    </div>
+    <ticket-selection (appliedFilters) = "getFilters($event)"></ticket-selection>
+    <div class="filter-list-block full-width">
+      <app-search-result #SearchResultList [(searchRequest)]="searchRequest" (shareData)="parentData=$event" 
+      (ReturnTimeDetailsdataSource)="returnTimeDatasource=$event" (isReturnBoxExpended)="isShowReturnTimeView=$event" (openmyDialog)="openmyDialog() " [tooltip]="isShowtooltip">
+    </app-search-result>
+    </div>
+    <app-return-search-result #SearchResultReturnList *ngIf="isReturnJourney" [(ReturnTimeDetailsdataSource)]="returnTimeDatasource" 
+    [searchRequest]="searchRequest" [IsDisabledNextPre]="SearchResultList.IsDisabledNextPre" [(isReturnBoxExpended)]="isShowReturnTimeView"
+    (shareData)="parentData=$event" [SearchResultList]="SearchResultList" (GetPreNextResult)="GetNextDayJourney($event)"  (GetPrePreviousResults)="GetPreviousDayJourney($event)" (GetPreNextResults)="GetNextDayJourney($event)">
+  </app-return-search-result>   
+  </div>
+</div>
+<!-- <app-travel-cost-sticky #TravelCostSticky [singleFare]="parentData"></app-travel-cost-sticky> -->
+<div class="sticky-footer-container">
+  <div class="container">
+    <div class="sticky-left-box">
+    
+      <div class="price-txt"> Price for {{passengerDetailLabel}}</div>
+      <div class="sticky-cost-txt">
+        <span class="material-icons" (click)="openfarebreakup()"> info_outline </span> Total Cost:
+        <span> &pound; <strong>{{ parentData?.toFixed(2) }}</strong></span>
+      </div>
+      <div class="points-txt"><img src="../../../assets/images/necatr.png">Collect Nectar points on every train
+        ticket</div>
+    </div>
+    <div class="sticky-right-box">
+      <div class="btn-stickybuynow-cust">
+        <button mat-stroked-button (click)="openJourneyExtra()" [disabled]="searchRequest.isReturnJourney?((SearchResultList.isBuyNowDisable&&SearchResultReturnList.isBuyNowDisableReturn)||(SearchResultReturnList.isBuyNowDisable&&SearchResultReturnList.isBuyNowDisableReturn)):SearchResultList.isBuyNowDisable">Buy Now</button>
+      </div>
+      <div class="btn-savelater-cust">
+        <button mat-stroked-button (click)="saveJourneyForLater()">Save for Later</button>
+      </div>
+
+    </div>
+  </div>
+</div>

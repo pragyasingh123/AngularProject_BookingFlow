@@ -1,0 +1,59 @@
+.sign-in-popup label
+{
+    font-weight: 500;
+    font-size: 16px;
+}
+.sign-in-popup mat-form-field
+{
+    margin-bottom: 1rem;
+}
+.sign-in-popup input
+{
+    background: #fff;
+}
+.remember-forgot
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center
+}
+.forgot-password
+{
+    color:#0092CB;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.forgot-password:hover
+{
+    cursor: pointer;
+}
+.login-button
+{
+    color:#fff;
+    width:100%;
+    background-color: #0092CB;
+    margin:15px 0;
+    border:none;
+    line-height: 40px;
+    font-size: 18px;
+}
+.create-new-account
+{
+    text-align: center;
+    color:#0092CB;
+}
+@media(max-width:474px)
+{
+    .remember-forgot,  .remember-forgot mat-checkbox
+    {
+        display: block;
+    }
+    .sign-in-popup label
+    {
+        font-size: 14px;
+    }
+    .sign-in-popup h1
+    {
+        font-size: 16px;
+    }
+  }

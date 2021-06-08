@@ -1,0 +1,85 @@
+.card-details-wrapper {
+    background: #fff;
+}
+
+.myprefrences-container .preferences-box {
+    border: 1px solid #e9f0f5;
+}
+
+.myprefrences-container h2.sub-title {
+    line-height: 30px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    outline: none;
+    color: #0092cb;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.myprefrences-container h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.payment-voch-block {
+    border-right: 1px solid #e9f0f5;
+    padding: 1.5rem 1.5rem 1.2rem 4rem;
+}
+
+.payment-voch-block .card-title {
+    font-weight: 500;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.payment-voch-block .card-title .pmt-card-type {
+    margin-left: 5.5rem;
+}
+
+.payment-voch-block .card-title .visa-icon {
+    background: url(/assets/images/visa-icon.svg) no-repeat center;
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    margin-right: 1rem;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.payment-voch-block .card-title .american-exp-icon {
+    background: url(/assets/images/american-exp-icon.svg) no-repeat center;
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    margin-right: 1rem;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.trash-icon {
+    background: url(/assets/images/trash-icon.svg) no-repeat center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.payment-voch-block ul.card-info {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 3rem;
+}
+
+.payment-voch-block ul.card-info li {
+    margin: 10px 0px 0px;
+    font-weight: lighter;
+}
+
+.payment-voch-block ul.card-info li .user-info {
+    font-weight: 500;
+}

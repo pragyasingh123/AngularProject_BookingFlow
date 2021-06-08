@@ -1,0 +1,186 @@
+<h2 class="text-center">Create a new Account</h2>
+<div class="container">
+    <div class="wrapper-container">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()"  *ngIf="!isShowSuccessSubmissionMessage">
+            <div class="row top-container">
+                <div class="register-card">
+    
+                    <div class="register-fields title-field">
+                        <label>Title<span class="star">*</span></label>
+                        <mat-form-field>
+                           
+                            <mat-select formControlName="title">
+                                <mat-option value="Mr" selected >Mr.</mat-option>
+                                <mat-option value="Mrs">Mrs.</mat-option>
+                                <mat-option value="Miss">Miss.</mat-option>
+                            </mat-select>
+                            <div *ngIf="registrationForm.get('title').hasError('required') && isSubmitted">
+                                <span class="validation-err">This Field is Required !!</span>
+                            </div>
+                        </mat-form-field>
+                    </div>
+    
+                    <div class="register-fields">
+                        <label>First Name<span class="star">*</span></label>
+                        <mat-form-field class="example-full-width" floatLabel="never" appearance="none">
+                            <input matInput placeholder="" value="" formControlName="firstName" required>
+                        </mat-form-field>
+                        <div *ngIf="registrationForm.get('firstName').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </div>
+    
+                    <div class="register-fields">
+                        <label>Surname<span class="star">*</span></label>
+                        <mat-form-field class="example-full-width" floatLabel="never" appearance="none">
+                            <input matInput placeholder="" value="" formControlName="surname" required>
+                        </mat-form-field>
+                        <div *ngIf="registrationForm.get('surname').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                    </div>
+    
+                    <div class="register-fields">
+                        <label>Phone Number</label>
+                        <mat-form-field class="example-full-width" floatLabel="never" appearance="none">
+                            <input matInput placeholder="" value="">
+                        </mat-form-field>
+                    </div>
+    
+                    <div class="register-fields email-field">
+                        <label>Email<span class="star">*</span></label>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="" formControlName="email" required>
+                        </mat-form-field>
+                        <div *ngIf="registrationForm.get('email').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                        <div *ngIf="registrationForm.get('email').hasError('email') && isSubmitted">
+                            <span class="validation-err">Please enter a valid email !!</span>
+                        </div>
+                    </div>
+    
+                    <div class="register-fields email-field">
+                        <label>Confirm Email<span class="star">*</span></label>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="" formControlName="cnf_email" required>
+                        </mat-form-field>
+                        <div *ngIf="registrationForm.get('cnf_email').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                        <div *ngIf="registrationForm.get('cnf_email').hasError('email') && isSubmitted">
+                            <span class="validation-err">Please enter a valid email !!</span>
+                        </div>
+                    </div>
+    
+                    <div class="register-fields password-field">
+                        <label>Password<span class="star">*</span></label>
+                        <mat-form-field appearance="fill">
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required
+                                minlength="8">
+                        </mat-form-field>
+                        <div *ngIf="registrationForm.get('password').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                        <div *ngIf="registrationForm.get('password').hasError('minlength') && isSubmitted">
+                            <span class="validation-err">Password must be atleast 8 characters long !!</span>
+                        </div>
+                        <div class="error-text" *ngIf="registrationForm.get('password').hasError('passwordStrength')">
+                            <span class="validation-err">Please include capital letters and special character also</span>
+                           </div>
+                    </div>
+    
+                    <div class="register-fields password-field">
+                        <label>Repeat Password<span class="star">*</span></label>
+                        <mat-form-field appearance="fill">
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="cnf_password" required>
+                        </mat-form-field>
+                        <div *ngIf="registrationForm.get('cnf_password').hasError('required') && isSubmitted">
+                            <span class="validation-err">This Field is Required !!</span>
+                        </div>
+                        <div *ngIf="registrationForm.get('cnf_password').hasError('minlength') && isSubmitted">
+                            <span class="validation-err">Password must be atleast 8 characters long !!</span>
+                        </div>
+    
+                    </div>
+    
+                    <div class="register-fields">
+                        <label>Post Code<span class="star">*</span></label>
+                        <mat-form-field class="example-full-width" floatLabel="never" appearance="none" >
+                            <input matInput placeholder="" value="" formControlName="postcode"  required    >
+                        </mat-form-field>
+                    </div>
+    
+                    <p>At South Western Railway, we want you to be the first to hear about travel inspiration,
+                        Promotions, offer,products and news</p>
+                    <p>We would also like to give you the opportunity to participate in market research about our
+                        product and service.</p>
+    
+                    <div class="register-radio-chk">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">No thanks, I don't want to be contacted</mat-radio-button>
+                            <mat-radio-button value="2">Yes please, I'd like to here about these by:</mat-radio-button>
+                        </mat-radio-group>
+    
+                        <div class="sub-options">
+                            <mat-checkbox>Email</mat-checkbox>
+                            <mat-checkbox>Post</mat-checkbox>
+                            <mat-checkbox>App push notification</mat-checkbox>
+                            <mat-checkbox>I confirm that I am atleast 16 years old.(we will only send marketing
+                                communications to persons 16 and above)</mat-checkbox>
+                        </div>
+                    </div>
+    
+                    <p>Communication will only come from first MTR South Western Trains Limited, although may
+                        include content from our trusted partners. Don't worry, if you change your min you can
+                        opt any time.</p>
+    
+                    <p class="reg-bold-blue">To find out more view our Privacy Policy.</p>
+    
+                    <div class="more-options">
+                        <mat-checkbox>Remember me on this computer</mat-checkbox>
+                        <mat-checkbox formControlName="termsandCondition">I accept the SWR terms and conditions</mat-checkbox>
+                        <div *ngIf="registrationForm.get('termsandCondition').hasError('required') && isSubmitted">
+                            <span class="validation-err">Please accept the term and Condition</span>
+                        </div>
+                    </div>
+    
+                    <p class="reg-bold-blue">Terms and conditions</p>
+                </div>
+            </div>
+    
+            <div class="row top-container">
+    
+                <div class="register-card register-nectar-card">
+    
+                   <div class="d-flex">
+                        <img src="../../../assets/images/necatr.png">
+                        <h2 class="reg-red-big">  Do you have a Nectar Card ?</h2>
+                   </div>
+                    <p class="reg-bold-blue nector-register">Register with us now!</p>
+                    <div class="register-fields">
+                        <label>Please enter your nector card number here</label>
+                        <mat-form-field class="example-full-width" floatLabel="never" appearance="none">
+                            <input matInput placeholder="" value="">
+                        </mat-form-field>
+                    </div>
+    
+                    <p>Last 11 digits of your card number</p>
+                </div>
+            </div>
+    
+            <div class="row last-container">
+    
+                <div class="register-card reg-buttons">
+                    <button mat-stroked-button color="primary" class="cancel">Cancel</button>
+                    <button type="submit" mat-stroked-button color="primary" class="register">Register</button>
+                </div>
+    
+            </div>
+        </form>
+    
+        <div *ngIf="isShowSuccessSubmissionMessage">
+            Form Submission is Successful
+            </div>
+    </div>
+</div>

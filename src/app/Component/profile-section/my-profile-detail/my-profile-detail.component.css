@@ -1,0 +1,76 @@
+/* personal detail*/
+
+.personal-detail-component-wrapper {
+    background: #fff;
+}
+
+.personal-detail-component-wrapper .personal-detail-block {
+    padding: 0.7rem 1.5rem;
+    background: #fff;
+}
+
+.personal-detail-component-wrapper h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.myprefrences-container h2.sub-title {
+    line-height: 30px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    outline: none;
+    color: #0092cb;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.personal-detail-block-btn button {
+    color: #52b6de;
+    border: 1px solid #52b6de;
+    line-height: 33px;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0.45rem;
+}
+
+.myprofile-det-box {
+    border: 1px solid #e9f0f5;
+    height: 100%;
+}
+
+.equalheight {
+    height: 47% !important;
+    margin-left: 1rem;
+}
+
+.myprofile-det-box .personal-detail-block ul.pers-details-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.myprofile-det-box .personal-detail-block ul.pers-details-list li {
+    margin-bottom: 1rem;
+}
+
+.myprofile-det-box .personal-detail-block ul.pers-details-list li p.pers-lbl {
+    margin-bottom: 0.2rem;
+    color: #93999e;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.myprofile-det-box .personal-detail-block ul.pers-details-list li p.pers-info {
+    margin-bottom: 0;
+    color: #535577;
+}
+
+.myprofile-det-box .personal-detail-block .close-acc-link a {
+    text-decoration: underline;
+    color: #0092cb;
+    font-weight: 500;
+}

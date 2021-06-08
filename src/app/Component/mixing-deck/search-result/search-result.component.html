@@ -1,0 +1,161 @@
+<div class="data-table-container">
+    <div class="data-header-block">
+      <div class="right-tble-header-block">
+
+        <div class="btn-outward-cust">
+          <button mat-flat-button>{{journeytypedisplay}}</button>
+        </div>
+        <div class="btn-journey-cust">
+          <button mat-flat-button (click)="addReturnDialog()">Add Return Journey</button>   
+        </div>
+        <div   class="station-list">
+          <span [attr.data-depart-station]="DepartureStation" class="stationNameDepart">{{DepartureStation.substring(0,30)}} {{DepartureStation.length > 30 ? ".." : ""}}</span><span><button mat-icon-button aria-label="">
+          <mat-icon>arrow_right_alt</mat-icon>
+        </button></span> 
+         <span [attr.data-arrival-station]="ArrivalStation" class="stationNameArrival" >{{ArrivalStation.substring(0,30)}} {{ArrivalStation.length > 30 ? ".." : ""}}</span> 
+      </div>
+      </div>
+       <div class="left-tble-header-block">
+  
+    <div class="btn-prev-cust">
+      <!-- <button mat-flat-button [disableRipple]="true" [disabled]="currentDateString == ongoingDateString || currentDateString == DepartureTimesStart " (click)="onClickGetPreviousDaySearch()"> -->
+        <button mat-flat-button [disableRipple]="true" [disabled]="currentDateString == ongoingDateString" (click)="onClickGetPreviousDaySearch()">
+        <mat-icon>keyboard_arrow_left</mat-icon><span class="mobile-hide">Previous Day</span>
+      </button>
+    </div>
+    <div class="btn-date-cust">
+      <button mat-flat-button disabled > {{searchRequest.datetimedepart | date:'EEEE'}} <br>
+        <span class="font-500"  >{{searchRequest.datetimedepart | date:'d LLL'}}  </span> </button>
+    </div>
+    <div class="btn-next-cust">
+       <button mat-flat-button  [disableRipple]="true" [disabled]="ongoingDateString == newmaxDate" (click)="onClickGetNextDaySearch()"><span class="mobile-hide">Next Day</span><mat-icon>keyboard_arrow_right</mat-icon></button>
+    </div>
+  </div>
+</div>
+</div> 
+
+<div class="sort-table-list-container">
+    
+      <div class=" table-list-block">
+        <div class="spinner-container" *ngIf="IsWait">
+            <mat-progress-spinner mode="indeterminate" diameter="60"></mat-progress-spinner>
+        </div>
+        <button mat-button class="sort-byt-mobile-btn" (click) ="openSortingPopup()">Sort By<mat-icon>sort</mat-icon></button>
+          <table id="tblOutwardOpenPureReturnFare" mat-table  [dataSource]="dataSource" matSortActive="minimumFare" matSortDirection="asc" matSortDisableClear matSort multiTemplateDataRows class="mat-elevation-z8">
+            
+            
+              <ng-container matColumnDef="sortby">
+                <th mat-header-cell *matHeaderCellDef class="sortByDsktop"> Sort by: </th>
+                <td mat-cell *matCellDef="let element" class="mobile-hide"></td>
+              </ng-container>
+              <ng-container matColumnDef="departureTime">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Dep Time </th>
+                  <td mat-cell *matCellDef="let element"><strong>Dep Time</strong> {{element.departureTime| date:'HH:mm' : '+0100'}} </td>
+                  <!-- <td mat-cell *matCellDef="let element"> {{element.departureTime}} </td> -->
+              </ng-container>
+              <ng-container matColumnDef="arrivalTime">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Arr Time
+                    <div class="tooltip-wrapper">
+                        <div class="tool-tip-msg rowmsg" *ngIf="tooltip">
+                            <p class="close-btn">&times;</p>
+                            <div class="tooltipmesg-box">
+                              <span class="material-icons">
+                                help
+                              </span>
+                              <div class="tip-msg-txt">
+                                <p>Change your mind?</p>
+                                <p>Click here to change your search criteria</p>
+                              </div>
+        
+                            </div>
+        
+                          </div>
+                    </div>
+                 </th>
+                  <td mat-cell *matCellDef="let element"><strong>Arr Time</strong> {{element.arrivalTime| date:'HH:mm' : '+0100' }} </td>
+              </ng-container>
+              <ng-container matColumnDef="totalChanges">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Changes </th>
+                  <td mat-cell *matCellDef="let element"><strong>Changes</strong> {{element.totalChanges}} </td>
+              </ng-container>
+              <ng-container matColumnDef="duration">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Duration </th>
+                  <td mat-cell *matCellDef="let element"><strong>Duration</strong> {{element.duration | hoursMins}} </td>
+              </ng-container>
+              <ng-container matColumnDef="minimumFare">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+                  <td mat-cell *matCellDef="let element"><strong>Price</strong> {{element.minimumFare | convertCentsToPound}} </td>
+              </ng-container>
+              <ng-container matColumnDef="journeytype">
+                  <th mat-header-cell *matHeaderCellDef>Journey Type</th>
+                  <td mat-cell *matCellDef="let element"><strong>Journey Type</strong> {{element.journeyType}} </td>
+              </ng-container>
+              <ng-container matColumnDef="infobutton">
+                  <th mat-header-cell *matHeaderCellDef></th>
+                  <td mat-cell *matCellDef="let element" class="icon">
+                      <mat-icon (click)="showRouteDetails(element, $event)">info_outline</mat-icon> </td>
+              </ng-container>
+
+              <ng-container matColumnDef="expandedDetail">
+                  <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+                      <div class="element-detail"
+                          [@detailExpand]="element == journeyResponse ? ' expanded' : 'collapsed'">
+                            <div class="from-to-location">
+                                <span>From</span>
+                                <div class="src-dstntn">
+                                    {{element.fromStation}}
+                                </div>
+                                <span>To</span>
+                                <div class="src-dstntn">
+                                  {{element.toStation}}
+                                </div>
+                            </div>
+                          <div class="element-diagram">
+                              <div class="element-symbol" *ngFor="let faredetails of element.journeyFareDetails| slice : Farestart:FareLimit let i = index">
+                                  <div [ngClass]="{'dataReturn discountedFare': faredetails.isDiscountedFare,
+                                                   'dataReturn': !faredetails.isDiscountedFare}" (click)="onSelectFareTravelSolution(faredetails,element,i)" [class.SelectedJourneyFare]=" (JourneyFareSelectedRow == -1 && element.minimumFare == faredetails.fare) ? true : i == JourneyFareSelectedRow">
+                                      <div class="col-50">
+                                          <ul >
+                                              <li class="price"><span>{{faredetails.fare | convertCentsToPound}}</span></li>
+                                              <li>{{faredetails.ticketType}} </li>
+                                              <li><i class="material-icons">
+                                                      info_outline
+                                                  </i></li>
+                                                  <li class="fare" *ngIf="faredetails.isDiscountedFare"><img src="../../assets/images/discounted-fare.png"></li>
+                                          </ul>
+                                      </div>
+                                      <div class="col-50 points">
+                                          <ul>
+                                              <li>{{faredetails.ticketDetails}}</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="view-more">
+                            <span  *ngIf ="FareLimit > 1"  mat-stroked-button   (click)="ViewLessDetails(element)">View Less<mat-icon>keyboard_arrow_up</mat-icon></span>
+                            <span *ngIf ="FareLimit < element.journeyFareDetails.length"  mat-stroked-button  (click)="ViewMoreDetails(element)">View More<mat-icon>keyboard_arrow_down</mat-icon></span>
+                        </div>
+                </div>
+                  </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let element; columns: displayedColumns" class="element-row"
+                  [class.expanded-row]="journeyResponse === element" (click)="GetReturnJourneyTimeDetails(element,journeyResponse != element)"  (click)="journeyResponse = journeyResponse === element ? null : element">
+              </tr>
+              <tr mat-row *matRowDef="let row;let element; columns: ['expandedDetail']" class="detail-row" [class.row-expanded]="journeyResponse === element"></tr>
+          </table>
+      </div>
+ 
+      <div class="tbl-footer-btn">
+          <div class="btn-earl-cust">
+              <button mat-stroked-button disabled={{IsShowEarlierbuttonDisabled}} (click)="showEarlierOrLater('Earlier')">
+                  <mat-icon > keyboard_arrow_left</mat-icon>Show Earlier
+              </button>
+          </div>
+          <div class="btn-nxt-cust">
+              <button   mat-stroked-button  disabled={{IsShowLaterbuttonDisabled}} (click)="showEarlierOrLater('Later')">Show Later<mat-icon>keyboard_arrow_right</mat-icon></button>
+          </div>
+      </div>
+
+  </div>

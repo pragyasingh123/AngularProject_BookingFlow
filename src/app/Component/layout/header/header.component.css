@@ -1,0 +1,75 @@
+.top-header
+{
+    background-color: #C7DAE7;
+}
+.top-header .container
+{
+    display: flex;
+    align-items: center;
+}
+.top-header span
+{
+    color: #000;
+    font-size: 14px;
+    padding-right: 20px;
+}
+.top-header .login-bx
+{
+    padding: 10px 25px;
+    background-color: #0092CC;
+    color: #fff;
+}
+.welcome-user
+{
+    padding: 10px 25px;
+    background-color: #0092CC;
+    color: #fff;
+    display: flex;
+    align-items: center; 
+}
+.welcome-user:hover
+{
+    cursor: pointer;
+}
+.welcome-user span.material-icons
+{
+    font-size:24px;
+    color:#fff;
+    padding-right: 0;
+}
+.welcome-user strong
+{
+    padding: 0 6px;
+}
+.top-header .login-bx:hover
+{
+    cursor:pointer;
+}
+.main-header
+{
+    background-color: #fff;
+    padding: 10px 0;
+}
+.main-header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-version
+{
+    text-decoration: underline;
+    color:#000;
+}
+
+@media(max-width:767px)
+{
+    .welcome-user, .top-header .login-bx
+    {
+        padding: 10px 15px;
+    }
+    .top-header .container
+    {
+        padding: 0;
+    }
+}

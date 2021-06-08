@@ -1,0 +1,671 @@
+.add-markBtn {
+    background: transparent;
+    padding: 0 1rem !important;
+    color: #0092CB;
+    border: 1px solid #0092CB !important;
+    min-width: 115px;
+}
+.updateBtn
+{
+   background-color: #0092CB;
+   color:#fff;
+   min-width:80px;
+   padding: 0 1rem;
+   border: 1px solid #0092CB;
+   line-height: 32px;
+}
+.journey-title {
+   font-weight: 600;
+   color: #0092CB;
+   padding-right: 30px;
+   font-size: 18px;
+}
+.journey-header-panel {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.journey-destinations {
+   display: flex;
+}
+.journey-destinations span {
+   float: left;
+   padding:0 5px
+}
+.journey-destinations i {
+   float: left;
+   line-height: 20px;
+}
+
+.journey-panel-btn .btn {
+  padding: 0;
+}
+.journey-panel-btn .btn-fav
+{
+   padding: 0 10px;
+}
+.border-bottom {
+   border-bottom: 1px #eee solid;
+   border-radius: 0px;
+}
+.mat-expanded {
+   margin-bottom: 20px;
+}
+.bottom-journey-pannel {
+    background: #eff4f8;
+    padding:0px 30px;
+    text-align: left;
+    padding-top: 10px;
+}
+.bottom-journey-pannel h2 {
+   font-size: 16px;
+   /* padding: 10px; */
+   font-weight: 600;
+}
+.bottom-journey-pannel a {
+   color: #0092CB;
+    text-decoration: none;
+}
+.bottom-journey-pannel .bdr-btm {
+   border-bottom: 1px #ccc solid;
+}
+.journeyType {
+   border: 1px #000 solid;
+   background: transparent;
+   font-size: 14px;
+   padding: 3px 6px;
+   border-radius: 8px;
+   min-width: 70px;
+   line-height: 1.5;
+   height: 30px;
+   margin-right: 15px;
+}
+.journey-timming, .journey-hours, .journey-seat-reservation {
+    font-weight: 500;
+}
+.journey-timming {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+}
+.off-return {
+    padding-top: 15px;
+}
+.journey-peak-offer .off-return span {
+    font-weight: 600;
+}
+.journey-seat-reservation, .journey-peak-offer p {
+   color:#64717c;
+   font-size: 12px;
+}
+.journey-peak-offer {
+    font-size: 12px;
+}
+.journey-price {
+  
+   font-size: 36px;
+}
+.journey-price span
+{
+   font-weight: 800;
+}
+.ticket-restriction {
+   font-weight: 500;
+   color: #0092CB;
+   font-size: 12px;
+   text-decoration: none;
+   display: block;
+}
+.ticket-restriction i {
+   float: left;
+    padding: 0 5px 0 0;
+    margin-top: -2px;
+}
+.journey-prefrences span {
+    color: #64717c;
+    line-height: 30px;
+    font-weight: 500;
+}
+.journey-prefrences {
+    /* float: left; */
+   font-weight: 500;
+}
+.seating-pannel td {
+   width: 25%;
+}
+.seating-pannel table {
+   border-bottom: 0px;
+}
+.journey-detials {
+   margin-top: 15px;
+}
+.journey-detials .mat-expansion-panel {
+   border-radius:0px;
+   background: #eff4f8;
+   box-shadow: 0 0 0;
+}
+.journey-detials .mat-expansion-panel-header {
+   font-weight: 600;
+}
+mat-expansion-panel-header.mat-expansion-panel-header
+{
+   height: auto !important;
+   padding: 10px 30px;
+   min-height: 58px;
+   max-height: 100%;
+}
+.journey-extras-options {
+    background: #fff;
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    margin: 0 5px;
+}
+.journey-extras-options .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+   background:#0092CB !important;
+}
+.journey-extras-checkbox {
+    float: left;
+    padding-right: 5px;
+}
+.journey-extras-details i {
+    float: left;
+    padding-right: 20px;
+}
+.journey-extras-details {
+   display: flex;
+   width: 100%;
+}
+.journey-extras-details label {
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+}
+.journey-extras-details label mat-icon
+{
+   padding-left: 15px;
+}
+.journey-extras-main {
+   display: flex;
+}
+.mat-expansion-panel-body {
+   padding: 20px;
+}
+
+
+.seating-preferences
+{
+   background-color: #fff;
+   margin:0 -30px;
+   /* padding: 15px; */
+   border: 1px solid #eff4f8;
+}
+
+.update-preferences .add-markBtn
+{
+   min-width: 146px;
+   margin:0 15px 0 50px;
+   line-height: 32px;
+}
+.preference-requirement
+{
+   padding: 15px 30px;
+}
+.reserve-for mat-checkbox
+{
+   
+   display: block;
+}
+.reserve-for{
+   color:#000;
+}
+.reserve-for .seating-availability
+{
+   font-size: 16px;
+   font-style: oblique;
+}
+.preference-requirement  h3
+{
+   margin: 10px 0 0 0;
+   font-weight: 600;
+   font-size: 15px
+}
+.preference-requirement h4
+{
+   font-weight: 600;
+   font-size: 14px;
+   margin-bottom: 5px; 
+}
+.preference-requirement mat-radio-button
+{
+   margin-right: 3rem;
+}
+.preference-requirement .radio-option-group-box
+{
+   padding-top: 10px;
+}
+.preference-requirement .border-bottom:last-child
+{
+   border-bottom: none !important;
+}
+
+.btn-update-cust
+{
+   background: #0092CB;
+   padding: 0 1rem;
+   color: #fff;
+   border: 1px solid #0092CB;
+   min-width: 115px;
+   position: absolute !important;
+   right: 10px;
+   bottom: 10px;
+}
+
+.journey-extras-content p
+{
+   margin-bottom: 6px;
+   font-size: 16px;
+   color: rgba(0,0,0, 0.6);
+ }
+ .journey-extras-content .totalpriceforAll
+{
+   font-weight: 500;
+   margin-bottom: 0;
+   font-style: italic;
+}
+.journey-extras-content mat-form-field
+{
+   padding-left: 20px;
+   width:80px
+}
+
+.mat-accordion .mat-expansion-panel
+{
+   margin-bottom: 20px;
+}
+.change-preference {
+   color: #0092CB;
+   float: right;
+   font-weight: 500;
+}
+.change-preference:hover
+{
+   cursor: pointer;
+}
+.sticky-cost-txt .material-icons:hover
+{
+cursor:pointer;
+}
+.sticky-footer-container{
+    background: #061b2b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+    color: #fff;
+    z-index: 999;
+    display: flex;
+}
+.sticky-footer-container .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sticky-footer-container .sticky-left-box{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 70%;
+   flex-direction: row-reverse;
+}
+.points-txt
+{
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+}
+.points-txt img
+{
+    padding-right: 8px;
+    max-height: 40px;
+}
+.sticky-footer-container .sticky-left-box .price-txt{
+    font-size: 1rem;
+}
+.sticky-footer-container .sticky-right-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sticky-footer-container .btn-stickybuynow-cust
+{
+    margin: 0 15px;
+}
+.sticky-upgrade.sticky-footer-container .btn-stickybuynow-cust
+{
+    margin: 0 10px;
+}
+
+.sticky-footer-container  .sticky-cost-txt{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.sticky-footer-container  .sticky-cost-txt .material-icons{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.5rem;
+}
+.btn-stickybuynow-cust button {
+    background: #f5d83c;
+    padding: 0.2rem 2.5rem;
+    color: #000;
+}
+.btn-savelater-cust button {
+    background: transparent;
+    padding: 0.2rem 1.5rem;
+    color: #fff;
+    border: 1px solid #fff !important;
+}
+.vHidden
+{
+   visibility: hidden;
+}
+.d-flx
+{
+   display: flex;
+}
+.p-r-5
+{
+   padding-right: 5px !important;
+}
+.p-l-5
+{
+   padding-left: 5px;
+}
+.bgClr
+{
+    background: #eff4f8;
+    padding: 20px 30px;
+}
+.btn.btn-fav
+{
+   padding-left: 0px;
+}
+@media(max-width:991px)
+{
+   .bottom-journey-pannel .pb-m-10
+   {
+      padding-bottom: 10px;
+   }
+   mat-expansion-panel-header.mat-expansion-panel-header
+   {
+      padding: 10px 10px;
+   }
+    .sticky-footer-container .btn-stickybuynow-cust
+    {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .sticky-footer-container .sticky-right-box
+    {
+        display: inline-block;
+        text-align: right;
+    }
+    .sticky-footer-container .sticky-left-box .price-txt {
+        font-size: 14px;
+        padding-bottom: 8px;
+    }
+    .modify-search-block .container 
+    {
+        display: block;
+        position: relative;
+    }
+    .sticky-footer-container .sticky-left-box
+    {
+        display: inline-block;
+    }
+    .points-txt
+    {
+        max-width: 100%;
+    }
+    .sticky-footer-container .container
+    {
+        padding: 15px;
+    }
+    .btn-stickybuynow-cust button {
+        padding: 0.2rem 1.8rem;
+        color: #000;
+        line-height: 1.6;
+    } 
+    .btn-savelater-cust button {
+        background: transparent;
+        padding: 0;
+        color: #fff;
+        border: none !important;
+        text-decoration: underline;
+        width: 114px;
+    }
+    .sticky-footer-container .sticky-cost-txt
+    {
+        justify-content: left;
+        font-size: 16px;
+        padding-bottom: 8px;
+    }
+    .modify-search-block .search-control
+    {
+        width:100%;
+        margin-bottom: 8px;
+    }
+    .modify-search-block .exch-btn-wrapper
+    {
+        position: absolute;
+        z-index: 1;
+        right: 20px;
+        top: 17px;
+    }
+    .modify-search-block .txt-note
+    {
+        padding-left: 0; 
+        width: 100%;
+        transition: 0.3s;
+        margin-bottom: 8px;
+    }
+    .modify-search-block  .btn-modify-cust
+    {
+        width: 100%;
+    }
+}
+@media(max-width:767px)
+{
+   .seating-preferences
+   {
+      background-color: #eff4f8;
+      margin: 0;
+      padding-bottom: 44px;
+      position: relative;
+   }
+   .bottom-journey-pannel  .seating-preferences h2
+   {
+      margin-bottom: 0;
+   }
+   .cancel-update-bx
+   {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+   }
+   .update-preferences  .cancel-update-bx .add-markBtn
+   {
+      margin-left: 0;
+      margin-right: 1%;
+   }
+   .update-preferences  .cancel-update-bx button
+   {
+      width: 49%;
+   }
+   .update-preferences  .cancel-update-bx button:last-child
+   {
+      margin-left: 1%;
+   }
+   .preference-requirement
+   {
+      padding:0;
+   }
+   .card-content, .card-heading
+   {
+      padding:10px;
+   }
+ .seating-preferences .card-heading
+ {
+    padding: 0;
+ }
+   .bottom-journey-pannel .border-bottom
+   {
+      border-bottom: 0 !important;
+   }
+   .bottom-journey-pannel h2
+   {
+      margin-bottom: 10px;
+   }
+  .bottom-journey-pannel
+  {
+
+   padding:6px 10px;
+   margin-bottom: 20px;
+  }
+  .journey-detials
+  {
+     margin-top:0;
+  }
+  .journey-detials mat-expansion-panel
+  {
+     margin-bottom: 0px !important;
+  }
+  .journey-detials mat-expansion-panel-header
+  {
+     min-height: auto !important;
+  }
+   .bottom-journey-pannel .d-flx
+   {
+      display: block;
+   }
+   .journeyType
+   {
+      margin-bottom: 15px;
+   }
+   .journey-header-panel
+   {
+      display: block;
+   }
+   .journey-prefrences
+   {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   .journey-prefrences span
+   {
+      padding-right: 5px;
+   }
+   .journey-prefrences p
+   {
+      margin-bottom: 0;
+   }
+   .journey-panel-btn .btn {
+      width: 50%;
+  }
+.journey-panel-btn   .add-markBtn
+   {
+      width: 100%;
+   }
+   .journey-header-panel   .journey-destinations
+   {
+      margin-bottom: 10px;
+   }
+   .journey-extras-main
+   {
+       display: block;
+   }
+   .journey-extras-main .journey-extras-options
+   {
+      width: 100%;
+      margin: 0 0 10px;
+      padding: 10px;
+   }
+   .journey-extras-details i {
+      padding-right: 10px;
+  }
+}
+@media(max-width:574px)
+{
+   .preference-requirement mat-radio-button 
+   {
+      margin-right: 10px;
+   }
+   .journey-extras-content mat-form-field
+   {
+      padding-left: 0;
+   }
+   .journey-extras-content p
+   {
+      font-size: 14px;
+   }
+   .journey-prefrences span
+   {
+      min-width: 110px;
+   }
+   .journey-prefrences
+   {
+      justify-content: unset;
+   }
+   .journey-price
+   {
+      font-size: 30px;
+   }
+   .journey-price span
+   {
+      font-weight: 500;
+   }
+   .journey-destinations
+   {
+      display: block;
+   }
+   .journey-panel-btn
+   {
+      clear: both;
+   }
+   .journey-panel-btn
+   {
+      padding-top: 10px;
+   }
+   .journey-title
+   {
+      padding-bottom: 10px;
+   }
+    .journey-header-panel  .add-markBtn
+   {
+      padding: 0 5px!important;
+      min-width: auto;
+   }
+}
+@media(max-width:474px)
+{
+   .bgClr
+   {
+      padding-left: 10px !important;
+      padding-right: 10px;
+   }
+   .seating-pannel .col-6
+   {
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: auto;
+   }
+}

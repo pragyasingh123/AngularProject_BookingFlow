@@ -1,0 +1,17 @@
+<div class="modal-popup-container">
+    <div class="card-heading">
+      <h1>Reset Password</h1>
+      <mat-dialog-actions class="close-btn">
+          <span class="material-icons" mat-dialog-close>clear</span>
+      </mat-dialog-actions>
+    </div>
+    <mat-dialog-content> 
+        <div class="shadow-none font-weight-500">
+          {{message}}
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="bt-1">
+    
+      <button mat-button class="default-btn" [mat-dialog-close]="true" (click)="onLogout(true)">{{buttonText}}</button>
+    </mat-dialog-actions>
+  </div>

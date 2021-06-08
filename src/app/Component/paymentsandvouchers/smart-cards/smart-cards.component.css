@@ -1,0 +1,64 @@
+.smart-card-wrapper {
+    background: #fff;
+}
+
+.myprefrences-container .preferences-box {
+    border: 1px solid #e9f0f5;
+}
+
+.smart-card-wrapper.myprefrences-container h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.smart-card-detail-block {
+    text-align: center;
+    padding: 2rem;
+}
+
+.smart-card-detail-block .smart-card-title {
+    font-size: 1.5rem;
+}
+
+.smart-card-detail-block .smart-card-info span {
+    font-weight: 500;
+}
+
+.smart-card-detail-block .smartcard-select-block {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.smart-card-detail-block .smartcard-select-block .mat-form-field-appearance-legacy .mat-form-field-label {
+    top: 2.281em;
+    left: 1em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.smart-card-detail-block .smartcard-select-block .mat-select {
+    line-height: 2.5;
+    background: #0092cb;
+    color: #fff;
+    border: 0;
+}
+
+.smart-card-detail-block .smartcard-select-block .mat-select .mat-select-value {
+    color: #fff;
+}
+
+.smart-card-detail-block .smartcard-select-block .mat-select .mat-select-arrow {
+    color: #fff;
+}
+
+.smartcard-dropdown.mat-select-panel .mat-option {
+    font-size: inherit;
+    line-height: 2.5em;
+    height: 2.5em;
+    font-weight: lighter;
+}

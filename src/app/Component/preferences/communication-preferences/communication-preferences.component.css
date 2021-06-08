@@ -1,0 +1,36 @@
+.myprefrences-container .preferences-box {
+	border: 1px solid #e9f0f5;
+}
+
+.myprefrences-container h3.sub-title {
+	background: #e9f0f5;
+	padding: 0.7rem 1.5rem;
+	font-weight: 500;
+	font-size: 0.95rem;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.myprefrences-container .preferences-content-details {
+	padding: 0.7rem 1.5rem;
+}
+
+.preferences-box .privacy-policy-link a {
+	font-weight: 500;
+	color: #0092cb;
+	text-decoration: none;
+}
+
+.page-cancel-btn button {
+	border: 1px solid #0092cb;
+	color: #0092cb;
+	padding: 0.5rem 3rem;
+	font-size: 1rem;
+}
+
+.page-save-btn button {
+	background: #0092cb;
+	color: #fff;
+	padding: 0.5rem 3rem;
+	font-size: 1rem;
+}

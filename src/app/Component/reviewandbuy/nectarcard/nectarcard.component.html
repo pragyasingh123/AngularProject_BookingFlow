@@ -1,0 +1,39 @@
+<div class="nectar-card">
+    <div class="card-heading">
+        <h2><img src="../../assets/images/necatr.png">Nectar Card</h2>
+    </div>
+    <div class="card-content">
+        <div class="bgClr">
+            <div class="row m-0">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <p *ngIf="!IsUserLoggedIn"> Signin to use your nectar card! You could  collect {{nectarValue}}
+                        points with this transaction.                                                       
+                   </p>
+                    <p *ngIf="IsUserLoggedIn && !ShowLoggedInNectarCardNumber">You can collect {{sharedService.NectarPointsEarned}} points with this transaction,
+                         Add your last 11 digit number.
+                    </p>
+                    <p *ngIf="IsUserLoggedIn && ShowLoggedInNectarCardNumber">You will collect {{sharedService.NectarPointsEarned}}
+                         points with this transaction.                       
+                   </p>
+                    <!-- <ng-template #NotLoggedIn> -->
+                        
+                    <!-- </ng-template> -->
+                        <div *ngIf="!ShowLoggedInNectarCardNumber && IsUserLoggedIn">
+                            <form [formGroup]="NectarCardForm" (ngSubmit)="AddNectarCard()" class="add-card-number">
+                                <mat-form-field class="example-full-width" appearance="none">
+                               
+                                <input  matInput  class="form-control" formControlName="CardNumber" value="{{LoyaltyCardNumber}}">
+                          
+                                </mat-form-field> 
+                                <button type="submit"  mat-button class="btn-update-cust" [disabled]="!NectarCardForm.valid">Add</button>
+                            </form>
+                        </div>
+
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

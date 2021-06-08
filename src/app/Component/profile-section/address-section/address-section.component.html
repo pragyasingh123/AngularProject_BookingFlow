@@ -1,0 +1,93 @@
+<div class="address-section-component-wrapper">
+    <!-- my address -->
+    <div class="row no-gutters mb-3">
+        <div class="col-12">
+            <div class="preferences-box">
+                <!--  -->
+                <h3 class="sub-title"><span class="address-title">My Addresses</span><span class="add-address-btn-block">
+                        <button mat-button  (click) ="addNewAddress()">Add New Address</button>
+                    </span></h3>
+                <!--  -->
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-4 new-address-block"  *ngFor="let address of addressResponse.address">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p class="add-title">{{address.addresstype}}</p>
+                               
+                              
+                            </div>
+                            <div class="col-12 col-sm-6 text-right">
+                                <button mat-icon-button color="primary">
+                                    <span class="edit-icon"></span>
+                                </button>
+                                <button mat-icon-button color="primary" value="{{address.addressid}}" (click)="opendeletepopup(address.addressid)" >
+                                    <span class="trash-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="new-address">
+                            {{address.address1}}
+                            {{address.address2}}
+                            {{address.address3}}
+                            {{address.town}}
+                            {{address.town}}
+                            <div class="w-100 mt-2">
+                                <mat-radio-button value="1" [checked]="true">Set as default device.
+                                </mat-radio-button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="col-12 col-sm-4 new-address-block">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p class="add-title">Office</p>
+                            </div>
+                            <div class="col-12 col-sm-6 text-right">
+                                <button mat-icon-button color="primary">
+                                    <span class="edit-icon"></span>
+                                </button>
+                                <button mat-icon-button color="primary">
+                                    <span class="trash-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="new-address">
+                            Allies Computing Ltd Manor Farm Barns NR14 7PZ NORWICH London
+                            <div class="w-100 mt-2">
+                                <mat-radio-button value="1" [checked]="true">Set as default device.
+                                </mat-radio-button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 new-address-block">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p class="add-title">Farm home</p>
+                            </div>
+                            <div class="col-12 col-sm-6 text-right">
+                                <button mat-icon-button color="primary">
+                                    <span class="edit-icon"></span>
+                                </button>
+                                <button mat-icon-button color="primary">
+                                    <span class="trash-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="new-address">
+                            Allies Computing Ltd Manor Farm Barns NR14 7PZ NORWICH London
+                            <div class="w-100 mt-2">
+                                <mat-radio-button value="1" [checked]="true">Set as default device.
+                                </mat-radio-button>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end -->
+</div>

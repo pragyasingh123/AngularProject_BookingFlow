@@ -1,0 +1,18 @@
+<div class="modal-popup-container">
+  <div class="card-heading">
+    <h1>Logout</h1>
+    <mat-dialog-actions class="close-btn">
+        <span class="material-icons" mat-dialog-close>clear</span>
+    </mat-dialog-actions>
+  </div>
+  <mat-dialog-content> 
+      <div class="shadow-none font-weight-500">
+          Are you sure you want to log out now? Logging out will clear your basket
+      </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end" class="bt-1">
+    <button class="default-btn" mat-button mat-dialog-close (click)="onLogout(false)">No</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button class="default-btn" [mat-dialog-close]="true" (click)="onLogout(true)">Yes</button>
+  </mat-dialog-actions>
+</div>

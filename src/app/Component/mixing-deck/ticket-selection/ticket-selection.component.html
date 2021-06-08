@@ -1,0 +1,36 @@
+<!-- <div class="ticket-filter-block" [ngClass]="{'active': showtickets}">
+  <button mat-button class="hideDefaultSlctn" (click)="clickEvent()"><img
+      src="../../assets/images/arrow.png"></button>
+  <p class="tkt-txt">Your default ticket selection is <span class="tkt-txt-bold">Cheapest Fare</span>. Would you to
+    change it?</p>
+  <div class="radio-option-block">
+    <div class="radio-option-group-box">
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Cheapest Fare</mat-radio-button>
+        <mat-radio-button value="2">First Class</mat-radio-button>
+        <mat-radio-button value="1">Quickest</mat-radio-button>
+        <mat-radio-button value="2">All Ticket Types</mat-radio-button>
+      </mat-radio-group>
+
+
+    </div>
+    <div class="btn-update-cust">
+      <button mat-flat-button>Update</button>
+    </div>
+  </div>
+</div> -->
+<div class="ticket-filter-block" [ngClass]="{'active': !showtickets}">
+  <button mat-button class="hideDefaultSlctn" (click)="clickEvent()"><img
+      src="../../assets/images/arrow.png"></button>
+  <p class="tkt-txt">Refine your tickets</p>
+  <div class="radio-option-block">
+    <div class="checkbox-option-group-box">
+        <mat-checkbox [checked]="cbStandardClass" (change)="SetValues('StandardClass')" value="1">Standard Class</mat-checkbox>
+        <mat-checkbox [checked]="cbFirstClass" (change)="SetValues('FirstClass')" value="2">First Class</mat-checkbox>
+        <mat-checkbox [checked]="cbITSOSmartCard" (change)="SetValues('ITSOSmartCard')" value="3">Only fares that can be loaded onto an ITSO SmartCard</mat-checkbox>
+    </div>
+    <div class="btn-update-cust">
+      <button (click)="ApplyFilters()" mat-flat-button>Apply</button>
+    </div>
+  </div>
+</div>

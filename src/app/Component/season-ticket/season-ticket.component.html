@@ -1,0 +1,46 @@
+<p>season-ticket works!</p>
+<div class="content-wrapper">
+    <div class="container">
+        <div class="progress-step-block">
+            <ul id="progressbar" class="text-center">
+                <li class="active" id="step1">
+                    <div>Enter Journey</div>
+                </li>
+                <li class="" id="step2">
+                    <div>Choose Ticket</div>
+                </li>
+                <li class="" id="step3">
+                    <div>Review & Buy</div>
+                </li>
+            </ul>
+            <button mat-stroked-button class="btn-help-cust" (click)="showhelp()">{{buttonName}}</button>
+        </div>
+        <div class="data-header-block mb-3">
+            <div class="left-header-block">
+                <div class="station-list d-flex">
+                    <span>Portsmouth Harbour</span>
+                    <mat-icon>arrow_right_alt</mat-icon>
+                    <span>London Waterloo</span>
+                </div>
+            </div>
+            <div class="right-header-block">
+                <div class="btn-date-cust">
+                    <button mat-flat-button>
+                        <span class="day">Thursday</span>
+                        <span class="font-500 date">29 Oct</span>
+                        <mat-icon>calendar_today_outline</mat-icon>
+                     </button>
+                </div>
+             
+            </div>
+        </div>
+        <div class="season-ticket-main-block d-flex">
+            <div class="select-all-icon-block">
+                <mat-radio-button value="2">Select all</mat-radio-button>
+            </div>
+            <div class="ticket-type">
+
+            </div>
+        </div>
+    </div>
+</div>

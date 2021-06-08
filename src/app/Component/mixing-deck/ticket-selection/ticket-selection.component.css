@@ -1,0 +1,64 @@
+
+.ticket-filter-block button.hideDefaultSlctn {
+    padding: 0;
+    min-width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 30px;
+    background-color: #061B2B;
+    height: 30px;
+    width: 40px;
+    border-radius: 0;
+    outline: none;
+}
+.ticket-filter-block button.hideDefaultSlctn img {
+    transition: 0.3s;
+}
+.checkbox-option-group-box mat-checkbox
+{
+    padding-right: 3rem;
+}
+.radio-option-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    position: relative;
+}
+.ticket-filter-block .btn-update-cust
+{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+@media(max-width:767px)
+{
+    
+    .radio-option-block   .checkbox-option-group-box
+    {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% - 115px);
+    }
+    .ticket-filter-block
+    {
+        padding:10px;
+    }
+    .ticket-filter-block.active
+    {
+        padding-bottom: 0;
+    }
+    .checkbox-option-group-box mat-checkbox
+    {
+       padding-right: 15px;
+    }
+}
+
+@media(max-width:474px)
+{
+    .checkbox-option-group-box mat-checkbox
+    {
+        width: 100%;
+    }
+}

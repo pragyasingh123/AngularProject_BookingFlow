@@ -1,0 +1,199 @@
+<div class="mode-of-delivery-box">
+    <div class="card-heading">
+        <h2>Mode of Delivery <span class="type-of-delivery">Free</span></h2>
+    </div>
+    <div class="card-content">
+        <div class="bgClr">
+            <span class="change-preference" (click)="opendeliverymode()">Change</span>
+            <div class="eticket-section" *ngIf="this.deliveryResponse.id==56">
+                <span class="form-of-delivery"><img src="../../assets/images/eticket.png">eTicket</span>
+                <div class="col-lg-6 col-sm-12 p-l-0">
+                    <p> {{this.deliveryResponse.description}}</p>
+                </div>
+            </div>
+
+            <div class="smart-card-section" *ngIf="this.deliveryResponse.id==51">
+
+                <span class="form-of-delivery"><img src="../../../../assets/images/smart-card-icon.svg">Smart
+                    Card</span>
+                <h5 class="label">Choose card</h5>
+                <div class="col-lg-8 pl-0">
+                    <mat-form-field floatLabel="never" class="fix-selectfield">
+                        <mat-label>*************0193</mat-label>
+                        <mat-select>
+                            <mat-option>*************0193</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="collect-ticket-station" *ngIf="this.deliveryResponse.id==3">
+                <span class="form-of-delivery"><img src="../../../../assets/images/station.svg">collect ticket from the
+                    station</span>
+                <div class="col-lg-8 pl-0">
+                    <!-- <p><strong>The payment card andbooking reference will be required for collection,</strong></p> -->
+                    <!-- <p>Otherwise, you will need to buy a new ticket at the full fare.</p>
+    <p>Stations with Self-Service ticket machines.</p> -->
+                    <p><strong>{{this.deliveryResponse.description}}</strong></p>
+                    <mat-form-field floatLabel="never" class="fix-selectfield mt-3">
+                        <input matInput placeholder="Departing from..." [(ngModel)]="searchText" required
+                            [matAutocomplete]="departureAutoSingle">
+                        <mat-autocomplete #departureAutoSingle="matAutocomplete">
+                            <mat-option mat-option *ngFor="let departure of locationData | filter:searchText"
+                                [value]="departure.description">{{departure.description}}</mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+
+                </div>
+            </div>
+
+            <div class="print-at-home" *ngIf="this.deliveryResponse.id==9">
+                <span class="form-of-delivery"><img src="../../../../assets/images/pdf-icon.svg">Print at Home</span>
+                <div class="col-lg-12 text-center p-0">
+                    <button mat-button class="btn-update-cust"> Download PDF</button>
+                </div>
+            </div>
+            <div class="first-class-post" *ngIf="this.deliveryResponse.id==4">
+                <span class="form-of-delivery">
+                    <img src="../../../../assets/images/first-class-icon.svg">First Class Post</span>
+                <div class="bdr-btm pb-4">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Title</label>
+                            <mat-form-field floatLabel="never" class="fix-selectfield">
+                                <mat-label>Mr</mat-label>
+                                <mat-select>
+                                    <mat-option>Mr</mat-option>
+                                    <mat-option value="option2">Miss</mat-option>
+                                    <mat-option value="option3">Mrs.</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>First Name <span class="requirefield">*</span></label>
+                            <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                                <input matInput placeholder="Name" value="">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Last Name <span class="requirefield">*</span></label>
+                            <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                                <input matInput placeholder="Name" value="">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row pt-4">
+                    <div class="col-12 text-right">
+                        <button mat-button class="add-new-addrs">Add New Address</button>
+                    </div>
+                    <div class="col-12 col-sm-4 new-address-block">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p class="add-title">home</p>
+                            </div>
+                            <div class="col-12 col-sm-6 text-right">
+                                <button mat-icon-button color="primary">
+                                    <span class="edit-icon"></span>
+                                </button>
+                                <button mat-icon-button color="primary">
+                                    <span class="trash-icon" (click)="opendeletepopup()"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="new-address">
+                            Allies Computing Ltd Manor Farm Barns NR14 7PZ NORWICH London
+                            <div class="w-100 mt-2">
+                                <mat-radio-button value="1" [checked]="true">Set as default device.
+                                </mat-radio-button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 new-address-block">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p class="add-title">Office</p>
+                            </div>
+                            <div class="col-12 col-sm-6 text-right">
+                                <button mat-icon-button color="primary">
+                                    <span class="edit-icon"></span>
+                                </button>
+                                <button mat-icon-button color="primary">
+                                    <span class="trash-icon" (click)="opendeletepopup()"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="new-address">
+                            Allies Computing Ltd Manor Farm Barns NR14 7PZ NORWICH London
+                            <div class="w-100 mt-2">
+                                <mat-radio-button value="1" [checked]="true">Set as default device.
+                                </mat-radio-button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 new-address-block">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <p class="add-title">Farm home</p>
+                            </div>
+                            <div class="col-12 col-sm-6 text-right">
+                                <button mat-icon-button color="primary">
+                                    <span class="edit-icon"></span>
+                                </button>
+                                <button mat-icon-button color="primary">
+                                    <span class="trash-icon" (click)="opendeletepopup()"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="new-address">
+                            Allies Computing Ltd Manor Farm Barns NR14 7PZ NORWICH London
+                            <div class="w-100 mt-2">
+                                <mat-radio-button value="1" [checked]="true">Set as default device.
+                                </mat-radio-button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="next-day-delivery" *ngIf="this.deliveryResponse.id==5">
+                <span class="form-of-delivery">
+                    <img src="../../../../assets/images/next-day-icon.svg">Next Day Delivery</span>
+                <div class="bdr-btm pb-4">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Title</label>
+                            <mat-form-field floatLabel="never" class="fix-selectfield">
+                                <mat-label>Mr</mat-label>
+                                <mat-select>
+                                    <mat-option>Mr</mat-option>
+                                    <mat-option value="option2">Miss</mat-option>
+                                    <mat-option value="option3">Mrs.</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>First Name <span class="requirefield">*</span></label>
+                            <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                                <input matInput placeholder="Name" value="">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Last Name <span class="requirefield">*</span></label>
+                            <mat-form-field floatLabel="never" class="fix-selectfield example-full-width">
+                                <input matInput placeholder="Name" value="">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+                <app-address-section [addressList]="addressResponse"></app-address-section>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,101 @@
+.voucher-wrapper {
+    background: #fff;
+}
+
+.myprefrences-container .preferences-box {
+    border: 1px solid #e9f0f5;
+}
+
+.voucher-wrapper.myprefrences-container h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.nectar-voucher-block {
+    padding: 2rem;
+}
+
+.nectar-voucher-block .evoucher-block, .nectar-voucher-block .gift-voucher-block {
+    background: #e9f0f5;
+    padding: 1.5rem;
+}
+
+.nectar-voucher-block .evoucher-block .evoucher-title, .nectar-voucher-block .gift-voucher-block .gift-voucher-title {
+    border-bottom: 1px solid #909ba4;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.evoucher-icon {
+    background: url('/assets/images/evoucher-icon.svg') no-repeat center;
+    display: inline-block;
+    width: 80px;
+    height: 25px;
+}
+
+.nectar-voucher-block .evoucher-block .add-evoucher-btn-box button {
+    color: #fff;
+    background: #74c0e0;
+    padding: 0.16rem 3rem;
+    margin-top: 0.5rem;
+}
+
+.nectar-voucher-block .gift-voucher-block .gift-coupon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.nectar-voucher-block .gift-voucher-block .gift-coupon-wrapper .gift-voucher-box {
+    background: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 140px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nectar-voucher-block .gift-voucher-block .custom-gift-voucher-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nectar-voucher-block .gift-voucher-block .custom-gift-voucher-block .custom-field-voucher {
+    display: flex;
+    align-items: center;
+}
+
+.nectar-voucher-block .gift-voucher-block .custom-gift-voucher-block .custom-field-voucher .custom-field-lbl {
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 400;
+    margin: 7px 15px 0px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.nectar-voucher-block .gift-voucher-block .custom-gift-voucher-block .custom-field-voucher .mat-form-field input {
+    background: #fff;
+}
+
+.nectar-voucher-block .gift-voucher-block .custom-gift-voucher-block .custom-card-buy-btn button {
+    color: #fff;
+    background: #0092cb;
+    padding: 0.1rem 3.5rem;
+    margin: 0.2rem 0px 0px 4rem;
+}
+
+.nectar-voucher-block .evoucher-block .mat-form-field input {
+    background: #fff;
+}

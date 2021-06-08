@@ -1,0 +1,95 @@
+<div class="modal-popup-container" *ngIf ="buttonText != 'Login' && !IsSeatReservationDetails">
+    <div  class="card-heading">
+        <img src="../../../assets/images/logo-mobile.png">
+        <h1 *ngIf="IsSessionExpired" >Session Expired</h1>
+        <mat-dialog-actions class="close-btn">
+            <span  class="material-icons" mat-dialog-close>clear</span>
+        </mat-dialog-actions>
+       
+     </div>
+    <div *ngIf="IsShowAlert" class="card-content">
+        <p>{{AlertMessage}}
+        </p>
+        <mat-dialog-actions  align="center" class="bt-1">
+            <button mat-button class="default-btn" mat-button mat-dialog-close>Ok</button>
+        </mat-dialog-actions>
+        <!-- <button mat-button class="default-btn" (click) ="OnClickCancle()">Ok</button> -->
+     </div>
+    <div  *ngIf="IsSessionExpired" class="card-content">
+        <p>We are sorry for the incovenience, but we've saved your search so you can easily run it again
+            if you still want to book your journey.
+        </p>
+        <div class="session-details">
+            <p><strong>{{SourceStation}}</strong> to <strong>{{DestintationStation}}</strong></p>
+            <p><strong>Outbound: </strong> {{Outbound}}</p>
+            <p><strong>{{Adults}}</strong> Adults  and <strong> {{Children}}</strong> Children [5-15]  with <strong> {{Railcards}} Railcards</strong></p>
+        </div>
+    </div>
+    <div *ngIf="IsSessionExpired" class="modal-footer">
+          <!-- <mat-dialog-actions  align="center" class="bt-1">
+            <button mat-button class="default-btn" mat-button mat-dialog-close>Ok</button>
+        </mat-dialog-actions> -->
+        <button align="center" (click) ="openModifyQTTDialog()" mat-button class="saveBtn mr-3">New search</button>
+    </div>
+    <div *ngIf="IsShowAlert && IsLoginRequest" class="modal-footer">
+        <button text-align = "center" (click) ="OnClickCancle()" mat-button class="saveBtn mr-3">Cancle</button>
+        <button text-align = "center" (click) ="OnClickLogin()" mat-button class="saveBtn mr-3">Login</button>
+    </div>
+</div>
+
+<div class="modal-popup-container" *ngIf="buttonText == 'Login'">
+    <div class="card-heading">
+        <!-- <h1>Confirmation</h1> -->
+        <img src="../../../assets/images/logo-mobile.png">
+        <mat-dialog-actions class="close-btn">
+            <span class="material-icons" mat-dialog-close>clear</span>
+        </mat-dialog-actions>
+    </div>
+    <mat-dialog-content>
+        <div class="shadow-none font-weight-500">
+            {{message}}
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center" class="bt-1">
+        <button mat-button class="default-btn" mat-button mat-dialog-close >{{buttonText}}</button>
+    </mat-dialog-actions>
+</div>
+
+<div class="modal-popup-container seat-reservation" *ngIf="IsSeatReservationDetails">
+    <div class="card-heading">
+        <img src="../../../assets/images/logo-mobile.png">
+        <h1>Seat Reservation Details</h1>
+        <mat-dialog-actions class="close-btn">
+            <span class="material-icons" mat-dialog-close>clear</span>
+        </mat-dialog-actions>
+    </div>
+    <mat-dialog-content>
+        <div class="shadow-none font-weight-500">
+            <div class="source-destination">
+                <span class="location"> {{SourceStation}}  to  {{DestintationStation}} </span>
+            </div>
+            <div class="coaches" *ngFor="let Seats of SeatReservationData; let currentElementIndex=index">
+             <!-- <p class="loaction-name"><img src="../../../assets/images/seat-icon.png">Coach J</p> -->
+                <div class="coach-details"> 
+                    <!-- <p><img src="../../../assets/images/seat-icon.png"><b>Coach </b>  {{Seats.coach}}  <b> Seat </b>  {{Seats.placeid}}</p> -->
+                    <span class="loaction-name"><img src="../../../assets/images/seat-icon.png"> Passenger {{currentElementIndex + 1}} : Coach  {{Seats.coach}}  Seat  {{Seats.placeid}}</span>
+                    <!-- <div *ngFor="let preference of Seats.preferenceCode; last as IsLast"> -->
+                         <p  class="loaction-name" *ngIf="Seats.preferenceString != ''"> {{Seats.preferenceString}}</p>
+                         <!-- <span *ngIf= "IsLast; else last">  {{preference.prefValue}}</span>
+                    </div> -->
+                </div>
+                 <!-- <p>Seat 21: Table, No Smoking, Aisle, Backwards</p>
+                 <p>Seat 21: Table, No Smoking, Aisle, Backwards</p>
+                 <p>Seat 21: Table, No Smoking, Aisle, Backwards</p>
+                 <p>Seat 21: Table, No Smoking, Aisle, Backwards</p> -->
+            </div>
+        </div> 
+        <mat-dialog-actions align="center" class="bt-1">
+            <button mat-button class="default-btn" mat-button mat-dialog-close >Close</button>
+        </mat-dialog-actions>
+        
+    </mat-dialog-content>
+    <!-- <mat-dialog-actions align="center" class="bt-1">
+        <button mat-button class="default-btn" mat-button mat-dialog-close >{{buttonText}}</button>
+    </mat-dialog-actions> -->
+</div>

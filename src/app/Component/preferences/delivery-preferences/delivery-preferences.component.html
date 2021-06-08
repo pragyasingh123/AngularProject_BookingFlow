@@ -1,0 +1,129 @@
+<div class="delivery-preferences-wrapper myprefrences-container">
+    <!--  Delivery Positions -->
+    <div class="row no-gutters mb-3">
+        <div class="col-12">
+            <div class="preferences-box">
+                <h3 class="sub-title">Delivery Preferences</h3>
+
+                <div class="delivery-preferences-accordion-container">
+                    <mat-accordion>
+                        <mat-expansion-panel #panel1>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-radio-button [checked]="panel1.expanded"> <span
+                                            class="delivery-icon-box eticket-icon"></span><span>E
+                                            ticket</span></mat-radio-button>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="mypref-expansion-content">
+                                <div class="eticket-info-txt">
+                                    <p class="mb-0">You will be able to receive e ticket to any devices that are linked
+                                        to your account.</p>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+                                        illo </p>
+                                </div>
+                                <div class="e-ticket-card">
+                                    <p class="newdevice-txt">New Device</p>
+                                    <mat-radio-button value="1" [checked]="true">Set as default device.
+                                    </mat-radio-button>
+                                    <p class="newdevice-usage-txt">I no longer have this device
+                                    </p>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel #panel2>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-radio-button [checked]="panel2.expanded"> <span
+                                            class="delivery-icon-box smart-card-icon"></span><span>Smart
+                                            Card</span></mat-radio-button>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>smart card section</p>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel #panel3>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-radio-button [checked]="panel3.expanded"> <span
+                                            class="delivery-icon-box collect-ticket-icon"></span><span>Collect your
+                                            ticket from the station</span>
+                                    </mat-radio-button>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="mypref-expansion-content">
+                                <div class="eticket-info-txt">
+                                    <p class="mb-0">
+                                        <strong>The payment card and bookking reference will
+                                            be required for collection,</strong>
+                                        <br /> Otherwise you will need to buy a new ticket at the full fare.
+                                        <br /> Stations with Self-Service ticket machines.
+
+                                    </p>
+                                </div>
+                                <div class="buy-ticket-block">
+                                    <mat-form-field floatLabel="never" class="fix-selectfield">
+                                        <mat-label>London Marylebone</mat-label>
+                                        <mat-select>
+                                            <mat-option>London Marylebone</mat-option>
+                                            <mat-option value="option2">Option 2
+                                            </mat-option>
+                                            <mat-option value="option3">Option 3
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                        </mat-expansion-panel>
+
+                        <ng-container *ngIf="showexpansionContainer">
+                            <mat-expansion-panel #panel4>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        <mat-radio-button [checked]="panel4.expanded"> <span
+                                                class="delivery-icon-box print-home-icon"></span><span>Print at
+                                                Home</span></mat-radio-button>
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <p>Print at home</p>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel #panel5>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        <mat-radio-button [checked]="panel5.expanded"> <span
+                                                class="delivery-icon-box first-class-icon"></span><span>First
+                                                Class Post</span></mat-radio-button>
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <p>First class post</p>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel #panel6>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        <mat-radio-button [checked]="panel6.expanded"> <span
+                                                class="delivery-icon-box next-day-icon"></span><span>Next Day
+                                                Delivery</span></mat-radio-button>
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <p>Next Day Delivery</p>
+                            </mat-expansion-panel>
+                        </ng-container>
+
+                    </mat-accordion>
+
+                    <div class="viewmore-less-btn-block">
+                        <button (click)="hideshowexpansion()" mat-button [innerHtml]="buttonSeemoreless" class="p-0">
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+</div>

@@ -1,0 +1,95 @@
+.mytrip-myseasons-wrapper {
+    background: #fff;
+}
+
+.profile-body .mytickets-container .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+.profile-body .mytickets-container .mat-form-field.fix-selectfield {
+    top: -5px;
+    left: -10px;
+    position: absolute;
+}
+
+.profile-body .mytickets-container .mat-form-field-label-wrapper {
+    top: -5px;
+    left: 10px;
+}
+
+.profile-body .mytickets-container .mat-select {
+    background: #fff;
+    border: 1px solid #000;
+    height: auto;
+}
+
+.profile-body .mytickets-container .mat-form-field-type-mat-select .mat-form-field-label {
+    color: #000;
+}
+
+.profile-body .mytickets-container .mat-button-toggle-group-appearance-standard {
+    border: 0;
+}
+
+.profile-body .mytickets-container .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 30px;
+    padding: 0 12px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.profile-body .mytickets-container .mat-button-toggle-checked {
+    color: #0092cb;
+    background: #fff;
+    font-weight: 500;
+}
+
+.mat-button-toggle-button:focus {
+    outline: none;
+}
+
+/*  */
+
+.profile-body .mat-tab-group .download-history-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    min-width: 125px;
+    line-height: 30px;
+    margin-left: 1rem;
+}
+
+.profile-body .mytickets-container .slider-form {
+    background: #364754;
+    padding: 1.5rem 5rem;
+}
+
+.profile-body .mytickets-container .slider-form .save-detail-btn {
+    background: #0092cb;
+    color: #fff;
+    padding: 0.2rem 4rem;
+    font-size: 1rem;
+    /* margin-right: 1.5rem; */
+}
+
+.profile-body .mytickets-container .slider-form .slider-form-label {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+}
+
+.profile-body .mytickets-container input.mat-input-element {
+    height: 40px;
+    background: #fff;
+}
+
+.profile-body .mytickets-container .maximize-icon {
+    background: url(/assets/images/maximize-icon.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    left: 7px;
+}

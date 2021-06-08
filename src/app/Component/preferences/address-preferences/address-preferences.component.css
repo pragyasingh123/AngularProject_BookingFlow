@@ -1,0 +1,53 @@
+.address-preferences-wrapper {
+	background: #fff;
+}
+
+.myprefrences-container .preferences-box {
+	border: 1px solid #e9f0f5;
+}
+
+.myprefrences-container h3.sub-title {
+	background: #e9f0f5;
+	padding: 0.7rem 1.5rem;
+	font-weight: 500;
+	font-size: 0.95rem;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.myprefrences-container .add-address-btn-block button {
+	color: #52b6de;
+	border: 1px solid #52b6de;
+	line-height: 33px;
+	position: absolute;
+	right: 1.5rem;
+	bottom: 0.45rem;
+}
+
+.new-address-block {
+	border-right: 1px solid #e9f0f5;
+	padding: 1rem 1.5rem;
+}
+
+.new-address-block .add-title {
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.new-address-block .new-address {
+	width: 65%;
+}
+
+.edit-icon {
+	background: url(/assets/images/edit-icon.svg) no-repeat center;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+
+.trash-icon {
+	background: url(/assets/images/trash-icon.svg) no-repeat center;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}

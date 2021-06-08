@@ -1,0 +1,179 @@
+.search-form-container .close-btn {
+    position: absolute;
+    right: 30px;
+    padding: 0;
+    margin: 0;
+    top: 10px;
+    min-height: auto;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9;
+}
+.three-select-field {
+    position: relative;
+}
+.singleQTT .btn-fullwidthcust 
+{
+    width:47%;
+    margin: 10px auto;
+}
+.exch-btn-wrapper button {
+    background: #0091ca;
+    border: 0;
+}
+.exch-btn-wrapper
+{
+    position: absolute;
+    left: 48%;
+    top: 10px;
+}
+
+.srchformcol2.btn-fullwidthcust {
+    width: 47%;
+    }
+.exch-btn-wrapper button .mat-icon {
+    color: #fff;
+    display: block;
+    width: auto;
+}
+.srchformrow {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.srchformcol, .srchformcol2 {
+    width: 47%;
+    margin: 10px 0;
+}
+.search-form-container .via-fields {
+    position: relative;
+}
+
+.search-form-container .via-fields mat-form-field.via-select {
+    width: 25%;
+}
+
+.search-form-container .via-fields mat-form-field.via-txtbox {
+    width: 75%;
+    left: unset;
+    top: 2px;
+    margin-left: 0px;
+}
+
+.search-form-container .via-fields mat-form-field.via-txtbox input.mat-input-element {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+}
+
+.search-form-container .via-fields mat-form-field.via-select mat-select {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    line-height: 2.2;
+}
+.search-form-container .via-fields.category mat-form-field.via-select {
+    width: 50%;
+    }
+    
+    .search-form-container .via-fields mat-form-field.via-select.child mat-select {
+    border-radius: 0 0.2rem 0.2rem 0;
+    }
+    
+    .search-form-container .close-btn .material-icons {
+    font-size: 32px;
+    background: none;
+    }
+    .railcardfields   .three-select-field.railcard-select-field mat-form-field:first-child {
+        width: 80%;
+    }
+    .railcardfields  .mt-n3
+    {
+        padding-right: 20px;
+    }
+    .three-select-field.railcard-nosofadult-field .mat-form-field {
+        width: 50%;
+    }
+    .search-form-container .fixed-label {
+        position: absolute;
+        left: 24px;
+        top: 12px;
+        /* color: #816b99; */
+        /* transform: translateY(-50%); */
+        margin-bottom: 0;
+    }
+    .search-form-container .railcardfields {
+    z-index: 999;
+    }
+    .search-form-container mat-icon
+    {
+        font-size: 24px !important;
+        color: rgba(0, 0, 0);
+    }
+    .railcardtype-close
+    {
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        padding: 0;
+        min-width: auto;
+        line-height: 1;
+    }
+    .railcard-select-field
+    {
+        position: relative;
+    }
+    .railcardfields mat-select
+    {
+        background: transparent !important;
+    }
+    .railcardfields .btn-fullwidthcust button
+    {
+        height: auto;
+    }
+    .railcardfields  .btn-fullwidthcust
+    {
+        width: 100%;
+    }
+    @media(max-width:991px)
+    {
+        .search-form-container .srchformrow-header
+        {
+            width: 95%;
+        }
+    }
+    @media(max-width:767px)
+    {
+        .search-form-container .btn-fullwidthcust
+        {
+            width: 100%;
+        }
+        .search-form-container .exch-btn-wrapper {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            z-index: 1;
+            left: unset;
+       }
+       .srchformrow
+       {
+           display: block;
+           position: relative;
+       }
+       .srchformcol, .srchformcol2 
+       {
+           width: 100%;
+       }
+       .search-form-container .close-btn .material-icons {
+        font-size: 24px;
+   }
+    .search-form-container .close-btn {
+        top:-25px;
+   }
+    }
+

@@ -1,0 +1,139 @@
+.wrapper-container{
+    background-color: #fff;
+    border-top: 3px solid #0092CB;
+    padding: 20px 15px;
+}
+h2
+{
+    margin-top: 16px;
+}
+
+.top-container{
+    border-bottom: 1px solid #ccc;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:20px;
+}
+.last-container{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:20px;
+}
+.register-card{
+    width: 500px;
+    margin: 0 auto;
+}
+.star{
+    color: red;
+    font-weight: bold;
+    margin-left: 2px;
+}
+.register-fields{
+    margin-bottom:13px;
+}
+/* .title-field{
+    margin-bottom:0px;
+} */
+.register-fields input,
+.title-field .mat-select{
+    background-color: #eff4f8;
+    border: none;
+    border-radius: 0px;
+    height: 40px;
+    margin-bottom: 7px;
+}
+.title-field mat-label{
+    margin-top: 12px;
+    display: flex;
+    margin-left: 8px;
+}
+.title-field .mat-select{
+    margin-bottom:0px
+}
+.password-field .mat-form-field,
+.email-field .mat-form-field{
+    margin-bottom:10px;
+}
+.password-field input{
+    margin-bottom:0px;
+}
+.register-radio-chk mat-radio-button{
+    display: block;
+    margin-bottom:8px;
+}
+.register-radio-chk .sub-options mat-checkbox{
+    display:block;
+    margin-left:30px;
+}
+.reg-bold-blue{
+    font-weight: bold;
+    color:#0092CB;
+}
+.more-options mat-checkbox{
+    display: block;
+}
+.reg-red-big{
+    color: #E17474;
+    margin-bottom: 0px;
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0;
+    line-height: 1;
+}
+.nector-register{
+    margin-left:33px;
+}
+.reg-buttons{
+    margin-top:10px;
+}
+.reg-buttons button{
+    color: #0092CB;
+    border: 1px solid #0092CB;
+    width: 170px;
+    margin-right:20px;
+}
+.reg-buttons .cancel{
+    background-color:transparent;
+}
+.reg-buttons .register{
+    background-color:#0092CB;
+    color:white;
+}
+.validation-err{
+    color:Red;
+    font-size:12px;
+}
+.register-nectar-card img
+{
+    max-height: 28px;
+    padding-right: 5px;
+}
+@media(max-width:767px)
+{
+    .container
+    {
+        padding: 0;
+    }
+}
+@media(max-width:474px)
+{
+    .reg-red-big
+    {
+        font-size: 16px;
+    }
+    .register-card.reg-buttons button:first-child
+    {
+     margin-right: 1%;
+     width: 49%;
+    }
+    .register-card.reg-buttons button:last-child
+    {
+        margin-left: 1%;
+        width: 49%;
+        margin-right: 0;
+    }
+    .register-radio-chk .sub-options mat-checkbox
+    {
+        margin-left: 15px;
+    }
+}

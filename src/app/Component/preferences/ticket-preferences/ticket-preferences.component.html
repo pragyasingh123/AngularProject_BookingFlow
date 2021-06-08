@@ -1,0 +1,44 @@
+<div class="ticket-preferences-wrapper myprefrences-container">
+    <div class="row no-gutters">
+        <div class="col-12">
+            <h2 class="sub-title">My Preferences</h2>
+        </div>
+    </div>
+
+    <div class="row no-gutters">
+        <div class="col-12">
+            <p class="prefrence-notification">Your default preferences will always be used and selected where available.
+                If they are not available for a selected journey, then all the possible options will be displayed.</p>
+        </div>
+    </div>
+
+    <div class="row no-gutters mb-3">
+        <div class="col-12">
+            <div class="preferences-box">
+                <h3 class="sub-title">Ticket Preferences</h3>
+                <div class="preferences-content-details">
+                    <div class="fare-block mb-2">
+                        <label class="tkt-pref-lbl">Fares</label>
+                        <mat-radio-group class="tkt-pref-radio-group">
+                            <mat-radio-button value="1" [checked]="true">Cheapest Fare
+                            </mat-radio-button>
+                            <mat-radio-button value="2">First Class</mat-radio-button>
+                            <mat-radio-button value="3">Quickest</mat-radio-button>
+                            <mat-radio-button value="4">All Ticket Types</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="tkt-type-block">
+                        <label class="tkt-type-lbl">Ticket Types</label>
+                        <section class="tkt-type-check-group">
+                            <mat-checkbox [checked]="true">Anytime</mat-checkbox>
+                            <mat-checkbox>Advance</mat-checkbox>
+                            <mat-checkbox>Off Peak</mat-checkbox>
+                            <mat-checkbox>Super Off Peak</mat-checkbox>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

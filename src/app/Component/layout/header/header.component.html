@@ -1,0 +1,31 @@
+
+<div class="top-header">
+    <div class="container justify-content-end align-center">
+        <span>Accessibility tools</span>
+        <div class="login-bx" (click) ="loginPopup()" *ngIf ="!isLoggedIn">Login</div>
+      <div *ngIf ="isLoggedIn" class="welcome-user" [matMenuTriggerFor]="menu">
+            <img src="../../../assets/images/user-icon.png">
+            <strong>Welcome, {{ customerName }}</strong>
+            <span class="material-icons">keyboard_arrow_down</span>
+            <mat-menu #menu="matMenu" class="login-menu-panel">
+                <button mat-menu-item (click)="openMyAccount()">My Account</button>
+                <button mat-menu-item>Refund</button>
+                <button mat-menu-item>Compensation</button>
+                <button mat-menu-item (click)="[showLogoutPopup()]">Logout</button>
+            </mat-menu>
+        </div> 
+     
+    </div>
+</div>
+<div class="main-header">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/images/logo.png" class="mobile-hide">
+            <img src="../../../assets/images/logo-mobile.png" class="desktop-hide">
+        </div>
+        <div class="text-version">
+            Text Only Version
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

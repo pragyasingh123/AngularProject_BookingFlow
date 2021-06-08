@@ -1,0 +1,51 @@
+.ticket-preferences-wrapper {
+    background: #fff;
+}
+
+.myprefrences-container h2.sub-title {
+    line-height: 30px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    outline: none;
+    color: #0092cb;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.myprefrences-container .prefrence-notification {
+    color: #0092cb;
+    border: 1px solid #0092cb;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.myprefrences-container .preferences-box {
+    border: 1px solid #e9f0f5;
+}
+
+.myprefrences-container h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.myprefrences-container .preferences-content-details {
+    padding: 0.7rem 1.5rem;
+}
+
+.myprefrences-container .preferences-content-details .fare-block .tkt-pref-lbl, .myprefrences-container .preferences-content-details .tkt-type-block .tkt-type-lbl {
+    display: block;
+    font-weight: 500;
+}
+
+.myprefrences-container .preferences-content-details .fare-block .tkt-pref-radio-group .mat-radio-button, .myprefrences-container .preferences-content-details .tkt-type-block .tkt-type-check-group .mat-checkbox {
+    width: 20%;
+    display: inline-block;
+}
+
+.myprefrences-container .preferences-content-details .fare-block .tkt-pref-radio-group .mat-radio-button.mat-radio-checked, .myprefrences-container .preferences-content-details .tkt-type-block .tkt-type-check-group .mat-checkbox.mat-checkbox-checked {
+    font-weight: 500;
+}

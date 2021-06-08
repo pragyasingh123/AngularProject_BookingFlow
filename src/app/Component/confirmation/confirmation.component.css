@@ -1,0 +1,224 @@
+.confirmation-page .container
+{
+    padding: 30px 0  50px 0;
+}
+.confirmation-msg
+{
+    background-color: #0C1C2B;
+    color:#fff;
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 2.5;
+}
+.confimation-banner
+{
+    position: relative;
+    height: 287px;
+}
+.confimation-banner img
+{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.confirmation-details
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 0 10px;
+    width: 100%;
+}
+.confirmation-details h2
+{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.confirmation-details p
+{
+    font-size: 20px;
+}
+.reference-number
+{
+    font-size: 50px;
+    font-weight: 500;
+    padding: 20px 0;
+    display: block;
+    line-height: 1;
+}
+.journey-summary .card-heading
+{
+    height: 59px;
+}
+.check-account
+{
+    background: #0092CB;
+    min-width: 200px;
+    font-size: 16px;
+    height: 42px;
+    margin-right: 15px;
+}
+.check-mail
+{
+    min-width: 200px;
+    font-size: 16px;
+    height: 42px;
+    margin-left: 15px;
+    border:1px solid #fff;
+}
+.check-mail img
+{
+    width:auto;
+    padding-right: 8px;
+    height: auto;
+}
+.journey-summary
+{
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+.journey-title {
+    font-weight: 600;
+    color: #0092CB;
+    padding-right: 30px;
+    font-size: 18px;
+}
+.journey-destinations {
+    display: flex;
+}
+ .journey-destinations span {
+    float: left;
+    padding:0 5px
+}
+ .journey-destinations i {
+    float: left;
+    line-height: 20px;
+}
+.bottom-journey-pannel {
+    background: #eff4f8;
+    padding: 10px 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.bottom-journey-pannel h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.journeyType {
+    border: 1px #000 solid;
+    background: transparent;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    min-width: 70px;
+    line-height: 1.5;
+    height: 30px;
+    margin-right: 15px;
+}
+.journey-timming, .journey-hours, .journey-seat-reservation {
+    font-weight: 500;
+}
+.journey-timming {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+}
+.off-return {
+    padding-top: 15px;
+}
+.journey-peak-offer .off-return span {
+    font-weight: 600;
+}
+.journey-seat-reservation, .journey-peak-offer p {
+   color:#64717c;
+   font-size: 12px;
+}
+.journey-peak-offer {
+    font-size: 12px;
+}
+.journey-price {
+  
+   font-size: 36px;
+}
+.journey-price span
+{
+   font-weight: 800;
+}
+   .ticket-restriction {
+    font-weight: 500;
+    color: #0092CB;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+}
+ .ticket-restriction i {
+    float: left;
+     padding: 0 5px 0 0;
+     margin-top: -2px;
+}
+ .journey-prefrences span {
+     color: #64717c;
+     line-height: 30px;
+     font-weight: 500;
+}
+ .journey-prefrences {
+     float: left;
+    font-weight: 500;
+}
+.collect-ticket p
+{
+font-size: 14px;
+}
+.bottom-journey-pannel.collect-ticket:last-child, .collect-ticket h2
+{
+    margin-bottom: 0;
+}
+.mode-via img
+{
+    padding: 6px 8px;
+    background: #fff;
+    margin-right: 10px;
+}
+.nectar-card h2 img
+{
+    padding-right: 15px;
+}
+.pstn-rltv
+{
+    position: relative;
+}
+.explore-more .content
+{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:50px;
+    color: #fff;
+}
+.explore-more img
+{
+    width:100%;
+    max-width: 100%;
+}
+.explore-more .content h1
+{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1;
+}
+.explore-more .content a
+{
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+.explore-more .content a:hover
+{
+    color: #fff;
+}

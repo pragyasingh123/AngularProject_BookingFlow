@@ -1,0 +1,57 @@
+<div class="content-wrapper">
+    <section class="background-banner">
+        <div class="container-fluid position-relative">
+            <div class="welcome-wrapper">
+                <p> Hey, {{customerDetail.firstname}}!</p>
+                <p>Welcome to SWR</p>
+            </div>
+
+        </div>
+    </section>
+<!-- mat body start -->
+<div class="container">
+    <section class="profile-body">
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <mat-tab-group animationDuration="0ms" class="booking-profile-tab" disableRipple>
+                    <mat-tab label="My Tickets">
+                      <app-mytrip-myseasons></app-mytrip-myseasons>
+                        <app-ticket-details></app-ticket-details>
+                    </mat-tab>
+                    <mat-tab label="My Preferences">
+                      <app-ticket-preferences></app-ticket-preferences>
+                        <app-seating-preferences></app-seating-preferences>
+                        <app-delivery-preferences></app-delivery-preferences>
+                        <app-preferred-smartcard></app-preferred-smartcard>
+                        <app-address-preferences></app-address-preferences>
+                        <app-communication-preferences></app-communication-preferences>
+                    </mat-tab>
+                    <mat-tab label="Payments & Vouchers">
+                       <app-card-details></app-card-details>
+                       <app-smart-cards></app-smart-cards>
+                       <app-continuous-authority></app-continuous-authority>
+                       <app-nectar-card-loyalty></app-nectar-card-loyalty>
+                       <app-vouchers></app-vouchers>
+
+                    </mat-tab>
+                    <mat-tab label="My Profile">
+                        <app-my-profile-detail [customerDetailData]="customerDetail"></app-my-profile-detail>
+                        <app-homestation></app-homestation>
+                        <app-saved-journey></app-saved-journey>
+                        <app-address-section  [addressList]="addressResponse"></app-address-section>
+                    </mat-tab>
+                </mat-tab-group>
+               
+               
+                <div class="profile-tab-buy-ticket-btn">
+                    <button mat-flat-button color="primary">Buy Tickets
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+   <!-- mat body end -->
+</div>

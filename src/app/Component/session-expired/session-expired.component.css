@@ -1,0 +1,77 @@
+.session-details
+{
+    border:1px solid #dee2e6;
+    padding : 15px 30px;
+    display: inline-block;
+}
+.modal-popup-container .modal-footer
+{
+    justify-content: flex-start;
+    padding-left: 0;
+}
+.card-content p
+{
+margin-bottom: 10px;
+}
+.seat-reservation  span
+{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+}
+.seat-reservation p 
+{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 32px;
+  
+    
+}
+.seat-reservation .location 
+{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 0.5p solid #dee2e6;
+    font-weight: bold;
+    font-size: 18px;
+}
+.source-destination p img, .loaction-name img
+{
+    padding-right: 8px;
+}
+.coach-details
+{
+    padding-left: 32px;
+}
+.seat-reservation mat-dialog-content
+{
+    margin: 0;
+    padding:10px 0;
+}
+ .default-btn
+{
+    background: #0092cb;
+    color: #fff;
+    border: 1px solid #0092cb;
+    margin: 0;
+}
+@media(max-width:474px)
+
+{
+    .session-details
+    {
+        padding: 10px;
+        width: 100%;
+    }
+    .seat-reservation p
+    {
+        font-size: 14px;
+    }
+    .seat-reservation h1
+    {
+        font-size: 16px;
+        padding: 0 5px;
+    }
+}

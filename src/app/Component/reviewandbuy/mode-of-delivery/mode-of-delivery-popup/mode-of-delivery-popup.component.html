@@ -1,0 +1,36 @@
+<div class="modal-popup-container">
+    <div class="card-heading">
+        <h1>Mode of Delivery</h1>
+        <mat-dialog-actions class="close-btn">
+            <span class="material-icons" mat-dialog-close>clear</span>
+        </mat-dialog-actions>
+    </div>
+    <div class="card-content">
+        <div class="select-mode-of-delivery">
+            <mat-radio-group aria-label="Select an option" *ngFor='let lits of this.deliveryResponse'>
+                <mat-radio-button [value]="lits.id" [id]="lits.id" (click)="SetMode(lits)" *ngIf="lits.id==56"><img
+                        src="../../../../assets/images/eticket.png">{{lits.displayName}}</mat-radio-button>
+                <div>{{this.displaydescription}}</div>
+                <mat-radio-button [value]="lits.id" [id]="lits.id" (click)="SetMode(lits)" *ngIf="lits.id==51"><img
+                        src="../../../../assets/images/smart-card.svg">{{lits.displayName}}</mat-radio-button>
+                <div>{{this.displaydescription}}</div>
+                <mat-radio-button [value]="lits.id" [id]="lits.id" (click)="SetMode(lits)" *ngIf="lits.id==3"><img
+                        src="../../../../assets/images/station.svg">{{lits.displayName}}</mat-radio-button>
+                <div>{{this.displaydescription}}</div>
+                <mat-radio-button [value]="lits.id" [id]="lits.id" (click)="SetMode(lits)" *ngIf="lits.id==4"><img
+                        src="../../../../assets/images/first-class-icon.svg">{{lits.displayName}}</mat-radio-button>
+                <div>{{this.displaydescription}}</div>
+                <mat-radio-button [value]="lits.id" [id]="lits.id" (click)="SetMode(lits)" *ngIf="lits.id==5"><img
+                        src="../../../../assets/images/email.svg">{{lits.displayName}}</mat-radio-button>
+                <div>{{this.displaydescription}}</div>
+                <mat-radio-button [value]="lits.id" [id]="lits.id" (click)="SetMode(lits)" *ngIf="lits.id==9"><img
+                        src="../../../../assets/images/pdf-icon.svg">{{lits.displayName}}</mat-radio-button>
+                <div>{{this.displaydescription}}</div>
+            </mat-radio-group>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button mat-button class="cancelBtn mr-3">Cancel</button>
+        <button mat-button class="saveBtn" (click)="SendMode()">Save</button>
+    </div>
+</div>

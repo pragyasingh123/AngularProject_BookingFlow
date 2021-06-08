@@ -1,0 +1,142 @@
+.delivery-preferences-wrapper {
+    background: #fff;
+}
+
+.myprefrences-container .preferences-box {
+    border: 1px solid #e9f0f5;
+}
+
+.delivery-preferences-wrapper.myprefrences-container h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container {
+    padding: 0.7rem 1.5rem;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel {
+    border-radius: 0 !important;
+    box-shadow: none;
+    margin-bottom: 1rem;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel.mat-expanded {
+    border: 1px solid #0092cb;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mat-expansion-panel-header {
+    background: #e9f0f5;
+    height: 60px !important;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mypref-expansion-content .eticket-info-txt {
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mypref-expansion-content .e-ticket-card {
+    border: 1px solid #ccc;
+    width: 25%;
+    min-width: 200px;
+    padding: 0.6rem;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mypref-expansion-content .e-ticket-card .newdevice-txt {
+    font-weight: 500;
+}
+
+.myprefrences-container .delivery-preferences-accordion-container .mat-expansion-panel .mypref-expansion-content .e-ticket-card .newdevice-usage-txt {
+    text-align: right;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #0092cb;
+    margin-bottom: 0;
+}
+
+.myprefrences-container .viewmore-less-btn-block {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: #52b6de;
+}
+
+.myprefrences-container .buy-ticket-block .mat-select {
+    line-height: 2.5;
+    background: #fff;
+}
+
+.myprefrences-container .buy-ticket-block {
+    display: block;
+    width: 70%;
+}
+
+.myprefrences-container .buy-ticket-block .mat-form-field-appearance-legacy .mat-form-field-label {
+    top: 2.281em;
+    left: 1em;
+    font-weight: 500;
+}
+
+.delivery-preferences-accordion-container .mat-radio-label-content {
+    display: flex;
+    align-items: center;
+}
+
+.delivery-preferences-accordion-container .delivery-icon-box {
+    display: inline-block;
+    width: 30px;
+    height: 44px;
+    margin: 0 1.5rem;
+}
+
+.delivery-preferences-accordion-container .eticket-icon {
+    background: url(/assets/images/eticket-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .mat-expanded .eticket-icon {
+    background: url(/assets/images/eticket-active-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .smart-card-icon {
+    background: url(/assets/images/smart-card-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .mat-expanded .smart-card-icon {
+    background: url(/assets/images/smart-card-active-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .collect-ticket-icon {
+    background: url(/assets/images/collect-ticket-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .mat-expanded .collect-ticket-icon {
+    background: url(/assets/images/collect-ticket-active-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .print-home-icon {
+    background: url(/assets/images/print-home-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .mat-expanded .print-home-icon {
+    background: url(/assets/images/print-home-active-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .first-class-icon {
+    background: url(/assets/images/first-class-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .mat-expanded .first-class-icon {
+    background: url(/assets/images/first-class-active-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .next-day-icon {
+    background: url(/assets/images/next-day-icon.svg) no-repeat center;
+}
+
+.delivery-preferences-accordion-container .mat-expanded .next-day-icon {
+    background: url(/assets/images/next-day-active-icon.svg) no-repeat center;
+}

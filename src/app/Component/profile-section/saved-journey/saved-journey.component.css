@@ -1,0 +1,82 @@
+.saved-journey-component-wrapper {
+    background: #fff;
+}
+
+.preferences-box {
+    border: 1px solid #e9f0f5
+}
+
+.saved-journey-block {
+    padding: 1.5rem;
+}
+
+.saved-journey-block .saved-journ-notification {
+    color: #0092cb;
+    border: 1px solid #0092cb;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.saved-journey-component-wrapper h3.sub-title {
+    background: #e9f0f5;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.saved-journey-block .saved-journey-detail-block {
+    border: 1px solid #e9f0f5;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.saved-journey-block .saved-journey-detail-block ul.save-journ-detail {
+    list-style: none;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.saved-journey-block .saved-journey-detail-block ul.save-journ-detail .save-journ-list-title {
+    color: #0092cb;
+}
+
+.saved-journey-block .saved-journey-detail-block .journey-buy-tkt-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saved-journey-block .saved-journey-detail-block .journey-buy-tkt-btn button {
+    background-color: #0092cb;
+    color: #fff;
+    padding: 0.1rem 1.8rem;
+}
+
+.saved-journey-block .saved-journey-detail-block .saved-jour-btn-grp {
+    text-align: right;
+    border-top: 1px solid #e9f0f5;
+    padding: 1rem 1.5rem 0.1rem 0px;
+    margin-top: 1.5rem;
+}
+
+.saved-journey-block .saved-journey-detail-block .saved-jour-btn-grp button {
+    border: 1px solid #000;
+    color: #000;
+    line-height: 25px;
+    min-width: 115px;
+    margin-left: 0.8rem;
+}
+
+.saved-journey-block .save-journ-viewmore-btn {
+    text-align: right;
+}
+
+.saved-journey-block .save-journ-viewmore-btn button {
+    color: #0092cb;
+    font-size: 1rem;
+    padding: 0;
+    line-height: 0;
+    text-transform: capitalize;
+}

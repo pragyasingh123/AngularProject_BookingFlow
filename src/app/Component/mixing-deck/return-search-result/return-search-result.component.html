@@ -1,0 +1,326 @@
+<div class="single-fare-mobile-strip d-md-none d-sm-block ">
+    Single Fare
+</div>
+<div class="outward-return-filter">
+    <div class="filter-list-block">
+        <div class="data-table-container">
+            <div class="data-header-block">
+                <div class="right-tble-header-block">
+
+                    <div class="btn-outward-cust">
+                        <button mat-flat-button>Outward</button>
+                    </div>
+
+                    <div data-title="{{DepartureStation}} To {{ArrivalStation}}" class="station-list"><span>{{(DepartureStation + " To " + ArrivalStation).substring(0,20)}} {{(DepartureStation + " To " + ArrivalStation).length > 20 ? ".." : ""}}</span></div>
+                </div>
+                <div class="left-tble-header-block">
+
+                    <div class="btn-prev-cust">
+                        <button mat-flat-button id="OUTP" [disableRipple]="true"
+                            [disabled]="currentDateString==ReturnongoingDateString"
+                            (click)="onClickoutReturnGetPreviousDaySearch()">
+                            <mat-icon>keyboard_arrow_left</mat-icon><span class="mobile-hide">Previous Day</span>
+                        </button>
+                    </div>
+                    <div class="btn-date-cust">
+                        <button mat-flat-button disabled>{{ searchRequest.datetimedepart| date:'EEEE'}} <br>
+                            <span class="font-500">{{searchRequest.datetimedepart| date:'d LLL'}} </span>
+                        </button>
+                    </div>
+                    <div class="btn-next-cust">
+                        <button mat-flat-button id="OUTN" [disableRipple]="true"
+                            [disabled]="this.searchRequest.datetimedepart == maxnextoutDateString"
+                            (click)="onClickoutReturnGetNextDaySearch()">
+                            <span class="mobile-hide">Next Day</span>
+                            <mat-icon>keyboard_arrow_right</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sort-table-list-container">
+
+
+            <div class="table-list-block">
+                <table id="tblSingleOutwardJourney" #table1="matSort" mat-table [dataSource]="SearchResultList.dataSourceOutward"
+                matSortActive="minimumFare" matSortDirection="asc" matSortDisableClear matSort multiTemplateDataRows class="mat-elevation-z8"  (matSortChange)="onMatSortChangeOutward($event)">
+
+                    <ng-container matColumnDef="departureTime">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dep Time </th>
+                        <td mat-cell *matCellDef="let element"> <strong>Dep
+                                Time</strong>{{element.departureTime| date:'HH:mm' : '+0100'}} </td>
+                        <!-- <td mat-cell *matCellDef="let element"> {{element.departureTime}} </td> -->
+                        <td mat-cell *matCellDef="let element"> {{element.departureTime| date:'HH:mm' : '+0100'}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="arrivalTime">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Arr Time </th>
+                        <td mat-cell *matCellDef="let element"><strong>Arr Time</strong>
+                            {{element.arrivalTime| date:'HH:mm' : '+0100' }} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="totalChanges">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Changes </th>
+                        <td mat-cell *matCellDef="let element"><strong>Changes</strong> {{element.totalChanges}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="duration">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Duration </th>
+                        <td mat-cell *matCellDef="let element"><strong>Duration</strong>
+                            {{element.duration | hoursMins}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="minimumFare">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+                        <td mat-cell *matCellDef="let element"><strong>Price</strong>
+                            {{element.minimumFare | convertCentsToPound}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="journeytype">
+                        <th mat-header-cell *matHeaderCellDef>journeytype</th>
+                        <td mat-cell *matCellDef="let element"><strong>journeytype</strong> {{element.journeyType}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="infobutton">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" class="icon"><i
+                                (click)="showRouteDetails(element, $event)" class="material-icons">
+                                info_outline
+                            </i> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="expandedDetail1">
+                        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+                            <div class="element-detail"
+                                [@detailExpand1]="element == expandedElement1 ? ' expanded1' : 'collapsed1'">
+                                <div class="element-diagram">
+                                    <div class="element-symbol">
+                                        <div class="dataReturn"
+                                            *ngFor="let faredetails of element.journeyFareDetails|slice : Farestart:FareLimit let i = index">
+                                            <div [ngClass]="{'col-3 discountedFare': faredetails.isDiscountedFare,
+                                            'col-3': !faredetails.isDiscountedFare}"
+                                                (click)="onSelectFareTravelSolution(faredetails,element,'S',i)">
+                                                <ul [class.SelectedJourneyFare]=" (JourneyFareSelectedRow == -1 && element.minimumFare == faredetails.fare) ? true : i == JourneyFareSelectedRow">
+                                                    <li class="price">
+                                                        <span>{{faredetails.fare | convertCentsToPound}}</span></li>
+                                                    <li>{{faredetails.ticketType}} </li>
+                                                    <li class="fare" *ngIf="faredetails.isDiscountedFare"><img
+                                                            src="../../assets/images/discounted-fare.png"></li>
+                                                    <li><i class="material-icons">
+                                                            info_outline
+                                                        </i></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let element; columns: displayedColumns" class="element-row"
+                        [class.expanded-row]="expandedElement1 === element"
+                        (click)="collapseReturnJourney(element,expandedElement1 != element)"
+                        (click)="expandedElement1 = expandedElement1 === element ? null : element">
+                    </tr>
+                    <tr mat-row *matRowDef="let row; let element columns: ['expandedDetail1']" class="detail-row"
+                        [class.row-expanded]="expandedElement1 === element"></tr>
+                </table>
+            </div>
+
+            <div class="tbl-footer-btn">
+                <div class="btn-earl-cust">
+                    <button mat-stroked-button disabled={{this.sharedService.IsShowEarlierbuttonDisabledSingleOutward}}
+                        (click)="showEarlierSingleOutward()">
+                        <mat-icon>keyboard_arrow_left</mat-icon>Show Earlier
+                    </button>
+                </div>
+                <div class="btn-nxt-cust">
+                    <button mat-stroked-button disabled={{this.sharedService.IsShowLaterbuttonDisabledSingleOutward}}
+                        (click)="showLaterSingleOutward()">Show Next<mat-icon>keyboard_arrow_right</mat-icon></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  
+    <div class="filter-list-block">
+        <div class="data-table-container">
+            <div class="data-header-block">
+                <div class="right-tble-header-block">
+                    <div class="btn-outward-cust">
+                        <button mat-flat-button>Return</button>
+                    </div>
+                    <div data-title="{{ArrivalStation}} To {{DepartureStation}}" class="station-list"><span>{{(ArrivalStation + " To " + DepartureStation).substring(0,20)}} {{(ArrivalStation + " To " + DepartureStation).length > 20 ? ".." : ""}}</span></div>
+                </div>
+                <div class="left-tble-header-block">
+
+                    <div class="btn-prev-cust">
+                        <button mat-flat-button [disableRipple]="true"
+                            [disabled]="this.searchRequest.datetimedepart == singleReturnongoingDateString || this.searchRequest.datetimedepart == this.searchRequest.datetimereturn"
+                            (click)="onClicksingleReturnGetPreviousDaySearch()">
+                            <mat-icon>keyboard_arrow_left</mat-icon><span class="mobile-hide">Previous Day</span>
+                        </button>
+                    </div>
+                    <div class="btn-date-cust">
+                        <button mat-flat-button disabled> {{searchRequest.datetimereturn | date:'EEEE'}} <br>
+                            <span class="font-500">{{searchRequest.datetimereturn | date:'d LLL'}} </span> </button>
+                    </div>
+                    <div class="btn-next-cust">
+                        <button mat-flat-button [disableRipple]="true"
+                            [disabled]="this.searchRequest.datetimereturn == maxnextsingleDateString"
+                            (click)="onClicksingleReturnGetNextDaySearch()"><span class="mobile-hide">Next Day</span>
+                            <mat-icon>keyboard_arrow_right</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sort-table-list-container">
+
+            <div class=" table-list-block" *ngIf="isReturnBoxExpended">
+                <table mat-table [dataSource]="ReturnTimeDetailsdataSource" matSortDirection="asc" matSortDisableClear matSort multiTemplateDataRows
+                    class="mat-elevation-z8">
+
+                    <ng-container matColumnDef="departureTime">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Dep Time </th>
+                        <td mat-cell *matCellDef="let element"><strong>Dep Time</strong>
+                            {{element.departureTime| date:'HH:mm' : '+0100'}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="arrivalTime">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Arr Time </th>
+                        <td mat-cell *matCellDef="let element"><strong>Arr Time</strong>
+                            {{element.arrivalTime| date:'HH:mm' : '+0100' }} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="totalChanges">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Changes </th>
+                        <td mat-cell *matCellDef="let element"><strong>Changes </strong>{{element.totalChanges}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="duration">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Duration </th>
+                        <td mat-cell *matCellDef="let element"><strong>Duration</strong>
+                            {{element.duration | hoursMins}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="selectReturnTime">
+                        <th mat-header-cell *matHeaderCellDef>Select Return Time</th>
+                        <td mat-cell *matCellDef="let element"> Select Return Time </td>
+                    </ng-container>
+                    <ng-container matColumnDef="infobutton">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" class="icon"><i
+                                (click)="showRouteDetails(element, $event)" class="material-icons">
+                                info_outline
+                            </i> </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="expandedDetail3">
+                        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns1.length">
+
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                    <tr mat-row *matRowDef="let element; columns: displayedColumns1" class="element-row"
+                        [class.expanded-row]="expandedDetail3 === element"
+                        (click)="expandedDetail3 = (expandedDetail3 === element) ? null : element" (click)="onClickReturnTime(element)">
+                    </tr>
+                    <tr mat-row *matRowDef="let row; let element columns: ['expandedDetail3']" class="detail-row"
+                        [class.row-expanded]="expandedDetail3 === element"></tr>
+                </table>
+            </div>
+
+            <div class="table-list-block" *ngIf="isReturnBoxExpended==null || !isReturnBoxExpended">
+                <table id="tblSingleReturnJourney" mat-table [dataSource]="SearchResultList.dataSourceReturn" #table2="matSort"
+                matSortActive="minimumFare" matSortDirection="asc" matSortDisableClear matSort multiTemplateDataRows class="mat-elevation-z8"  (matSortChange)="onMatSortChangeReturn($event)">
+
+                    <ng-container matColumnDef="departureTime">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Dep Time </th>
+                        <td mat-cell *matCellDef="let element"><strong>Dep Time</strong> {{element.departureTime| date:'HH:mm' : '+0100'}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="arrivalTime">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Arr Time </th>
+                        <td mat-cell *matCellDef="let element"><strong>Arr Time</strong> {{element.arrivalTime| date:'HH:mm' : '+0100' }} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="totalChanges">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Changes </th>
+                        <td mat-cell *matCellDef="let element"><strong>Changes</strong> {{element.totalChanges}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="duration">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Duration </th>
+                        <td mat-cell *matCellDef="let element"><strong>Duration</strong> {{element.duration | hoursMins}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="minimumFare">
+                        <th mat-header-cell *matHeaderCellDef  mat-sort-header>Price</th>
+                        <td mat-cell *matCellDef="let element"><strong>Price</strong>
+                            {{element.minimumFare ==0 ? "" :  element.minimumFare | convertCentsToPound}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="journeytype">
+                        <th mat-header-cell *matHeaderCellDef>journeytype</th>
+                        <td mat-cell *matCellDef="let element"><strong>journeytype</strong> {{element.journeyType}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="infobutton">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" class="icon"><i (click)="showRouteDetails(element, $event)"
+                                class="material-icons">
+                                info_outline
+                            </i> </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="expandedDetail">
+                        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns2.length">
+                            <div class="element-detail"
+                                [@detailExpand2]="element == expandedElement2 ? 'expanded2' : 'collapsed2'">
+                                <div class="element-diagram">
+                                    <div class="element-symbol">
+                                        <div class="dataReturn"
+                                            *ngFor="let faredetails of element.journeyFareDetails|slice : Farestart:FareLimit let i = index">
+                                            <div [ngClass]="{'col-3 discountedFare': faredetails.isDiscountedFare,
+                                                                                'col-3': !faredetails.isDiscountedFare}"
+                                                (click)="onSelectFareTravelSolution(faredetails,element,'R',i)">
+                                                <ul
+                                                    [class.SelectedJourneyFare]=" (ReturnJourneyFareSelectedRow == -1 && element.minimumFare == faredetails.fare) ? true : i == ReturnJourneyFareSelectedRow">
+                                                    <li class="price">
+                                                        <span>{{faredetails.fare | convertCentsToPound}}</span></li>
+                                                    <li>{{faredetails.ticketType}} </li>
+                                                    <li class="fare" *ngIf="faredetails.isDiscountedFare"><img src="../../assets/images/discounted-fare.png"></li>
+                                                    <li><i class="material-icons">
+                                                            info_outline
+                                                        </i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let element; columns: displayedColumns" class="element-row"
+                        [class.expanded-row]="expandedElement2 === element" (click)="selectSingleReturnJourney(element,expandedElement2 != element)" 
+                        (click)="expandedElement2 = (expandedElement2 === element) ? null : element">
+                    </tr>
+                    <tr mat-row *matRowDef="let row; let element columns: ['expandedDetail']" class="detail-row"
+                        [class.row-expanded]="expandedElement2 === element"></tr>
+                </table>
+            </div>
+
+
+            <div class="tbl-footer-btn">
+                <div class="btn-earl-cust">
+                    <button mat-stroked-button disabled={{this.sharedService.IsShowEarlierbuttonDisabledSingleReturn}}
+                        (click)="showEarlierSingleReturn()">
+                        <mat-icon>keyboard_arrow_left</mat-icon>Show Earlier
+                    </button>
+                </div>
+                <div class="btn-nxt-cust">
+                    <button mat-stroked-button disabled={{this.sharedService.IsShowLaterbuttonDisabledSingleReturn}}
+                        (click)="showLaterSingleReturn()">Show Next<mat-icon>keyboard_arrow_right</mat-icon></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

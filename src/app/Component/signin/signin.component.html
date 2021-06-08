@@ -1,0 +1,34 @@
+
+<div class="sign-in-popup">
+    <div class="modal-popup-container">
+        <div class="card-heading">
+            <h1>Sign in to your Account</h1>
+            <mat-dialog-actions class="close-btn">
+                <span class="material-icons" mat-dialog-close>clear</span>
+            </mat-dialog-actions>
+        </div>
+        <div class="card-content">
+            <form [formGroup]="form" >
+            <mat-form-field class="example-full-width" appearance="none">
+                <label  for="username">Email Address</label>
+                <input matInput placeholder="Enter Email" value="" type="text" formControlName="username">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="none">
+                <label for="password">Password</label>
+                <input matInput placeholder="Enter Password" value="" type="password" formControlName="password">
+            </mat-form-field>
+            <div class="remember-forgot">
+                <mat-checkbox>Remember me on this computer</mat-checkbox>
+                <span class="forgot-password" (click)="forgetPassword()">Forgot Password</span>
+            </div>
+            <button mat-strocked-button class="login-button" (click)="submit()">Login</button>
+            <div class="create-new-account"  (click)="registerForm()">
+                <span>Create a new account</span>
+            </div>
+            <div *ngIf="showErroMessage" class="showErroMessage">
+                <span>Please enter Valid email id and password</span>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

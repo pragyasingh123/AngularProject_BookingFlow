@@ -1,0 +1,56 @@
+.nectar-card
+{
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.nectar-card .card-heading img
+{
+    padding-right: 15px;
+}
+.nectar-card  .card-content p
+{
+    margin-bottom: 15px;
+}
+.add-card-number 
+{
+    display:flex;
+}
+.add-card-number button.btn-update-cust
+{
+margin-left: 20px;
+position: unset !important;
+height: 40px;
+}
+.add-card-number mat-form-field
+{
+    width:calc(100% - 135px);
+}
+.add-card-number input
+{
+    border:none;
+    background-color: #fff;
+    padding:0 20px;
+
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+@media(max-width:767px)
+{
+    .add-card-number button.btn-update-cust
+    {
+        margin-left: 10px;
+        min-width: 78px;
+    }
+    .add-card-number mat-form-field
+    {
+        width:calc(100% - 78px);
+    }
+
+}

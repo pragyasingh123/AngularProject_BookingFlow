@@ -1,0 +1,154 @@
+.mode-of-delivery-box
+{
+   background-color: #fff;
+   margin-bottom: 20px;
+   margin-top:20px;
+}
+.mode-of-delivery-box .card-heading h2
+{
+   color: #0092CB;
+   font-size: 18px;
+   font-weight: 600;
+}
+.mode-of-delivery-box .card-heading h2 .type-of-delivery
+{
+   margin-left: 15px;
+   color: #fff;
+   padding: 5px 8px;
+   background-color: #058B34;
+   border-radius: 4px;
+   font-size: 13px;
+   font-style: italic;
+}
+.mode-of-delivery-box .form-of-delivery
+{
+   font-size: 15px;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   color: #061b2b;
+   margin-bottom: 20px;
+   display: inline-block;
+   position: relative;
+}
+.mode-of-delivery-box .form-of-delivery img
+{
+   position: absolute;
+   left: -40px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.mode-of-delivery-box mat-select, .mode-of-delivery-box input
+{
+   background-color: #fff;
+}
+.change-preference {
+    color: #0092CB;
+    font-weight: 500;
+    position: absolute;
+    right: 30px;
+ }
+ .change-preference:hover
+ {
+    cursor: pointer;
+ }
+ .bgClr {
+   position: relative;
+   padding-left: 60px;
+}
+.eticket-section
+{
+   display: flex;
+}
+ .eticket-section .col-lg-6
+{
+   margin: auto;
+}
+h5.label
+{
+font-weight: 500;
+font-size: 14px;
+margin-bottom: 8px;
+}
+.collect-ticket-station p strong
+{
+   color: #061b2b;
+   letter-spacing: 0.5px;
+   font-size: 15px;
+}
+.print-at-home button
+{
+   width: 160px;
+   line-height: 3;
+   position: static !important;
+}
+.bdr-btm
+{
+   border-bottom: 1px solid #000;
+}
+.new-address-block {
+	border-right: 1px solid #e9f0f5;
+	padding: 1rem 1.5rem;
+}
+
+.new-address-block .add-title {
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.new-address-block .new-address {
+	width: 65%;
+}
+.edit-icon {
+	background: url(/assets/images/edit-icon.svg) no-repeat center;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.trash-icon {
+	background: url(/assets/images/trash-icon.svg) no-repeat center;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.add-new-addrs
+{
+   background: transparent;
+   padding: 0 1rem;
+   color: #0092CB;
+   border: 1px solid #0092CB !important;
+}
+@media(max-width:767px)
+{
+   .mode-of-delivery-box .form-of-delivery
+   {
+      width: calc(100% - 48px);
+   }
+   .p-l-0
+   {
+      padding-left: 0;
+   }
+   .eticket-section
+   {
+      display: block;
+   }
+ 
+}
+@media(max-width:474px)
+{
+
+   .mode-of-delivery-box .form-of-delivery
+   {
+      display: flex;
+      align-items: center;
+   }
+   .mode-of-delivery-box .form-of-delivery img
+   {
+      position: static;
+      transform: translateY(0);
+      padding-right: 10px;
+   }
+   .change-preference
+   {
+      right: 10px;
+   }
+}

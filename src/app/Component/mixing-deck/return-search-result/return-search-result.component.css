@@ -1,0 +1,174 @@
+.data-table-container .data-header-block .right-tble-header-block {
+    justify-content: unset;
+}
+.data-table-container .data-header-block .right-tble-header-block .station-list
+{
+    padding-left: 20px;
+}
+.outward-return-filter {
+    margin: 20px auto;
+    display: flex;
+}
+.outward-return-filter .dataReturn {
+    display: block;
+   }
+.outward-return-filter .filter-list-block:first-child {
+    margin-right:1%;
+    width: 49%;
+}
+.outward-return-filter .filter-list-block:last-child {
+    margin-left: 1%;
+    width: 49%;
+}
+.outward-return-filter .data-table-container, .outward-return-filter .sort-table-list-container {
+    width:100%;
+}
+.outward-return-filter .data-table-container .data-header-block .left-tble-header-block {
+    width: auto;
+}
+.outward-return-filter .sort-table-list-container .table-list-block table tr th:first-child.mat-header-cell {
+    color: #20234e;
+    width: auto;
+}
+.outward-return-filter .col-3 {
+    width: 33.33%;
+    padding: 5px;
+    float: left;
+    box-sizing: border-box;
+    max-width: 33.33%;
+    white-space: normal;
+}
+.outward-return-filter .dataReturn ul {
+    text-align: center;
+    list-style: none;
+    position: relative;
+    height: 132px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.outward-return-filter .dataReturn ul li.price {
+    font-size: 24px;
+   padding-bottom: 6px;
+}
+.outward-return-filter .dataReturn ul li.price span {
+    font-weight: 600;
+    color:#000;
+}
+.outward-return-filter .dataReturn ul:hover {
+    background-color: #061B2B;
+}
+.outward-return-filter .dataReturn ul:hover li.price, .outward-return-filter .dataReturn ul:hover li.price span {
+    color:#fff !important;
+}
+.outward-return-filter .dataReturn ul li:last-child {
+    position: absolute;
+    right:5px;
+    top:5px;
+}
+.outward-return-filter .data-table-container .btn-date-cust button .day {
+    font-size: 0.7rem;
+}
+.outward-return-filter .btn-date-cust button.mat-flat-button{
+    padding: 0.1rem 8px;
+    width: 77px;
+    margin: 0 8px;
+}
+.outward-return-filter .data-table-container .data-header-block .right-tble-header-block .station-list {
+    padding-left: 10px;
+}
+.outward-return-filter li.fare {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.outward-return-filter li.fare img {
+    width: 100px;
+}
+.outward-return-filter .detail-row td {
+    padding: 0;
+    background-color: #eff4f8;
+    box-sizing: border-box;
+    padding-right: 0 !important;
+}
+.outward-return-filter .row-expanded .element-detail {
+    border: 1px solid #0092CB;
+   padding:5px;
+   margin-bottom: 10px;
+}
+.SelectedJourneyFare {
+    background-color: #061B2B;
+    border: 1px solid #061B2B;
+    cursor: pointer;
+}
+@media(min-width:768px)
+{
+    .outward-return-filter .table-list-block
+    {
+        height: 400px;
+    }
+}
+@media(max-width:1024px)
+{
+    .outward-return-filter {
+        display: block;
+   }
+    .outward-return-filter .filter-list-block:first-child {
+        margin: 0 !important;
+        margin-bottom: 20px !important;
+        width: 100%;
+   }
+    .outward-return-filter .filter-list-block:last-child {
+        margin-left: 0;
+        width: 100%;
+   }
+}
+@media(max-width:991px)
+{
+    .outward-return-filter
+    {
+        display: block;
+    }
+    .outward-return-filter .filter-list-block:first-child {
+        margin-right:0%;
+    }
+    .outward-return-filter .filter-list-block:last-child {
+        margin-left: 0%;
+    }
+    
+}
+@media(max-width:767px)
+{
+    .single-fare-mobile-strip
+    {
+       color: #000;
+       font-weight: 500;
+       font-size: 14px;
+       padding: 6px 0;
+       background-color: #f5d83c;
+       text-align: center;
+    }
+    .outward-return-filter .dataReturn {
+        width:50%
+    }
+    .outward-return-filter .dataReturn .col-3
+    {
+        max-width: 100%;
+        width: 100%;
+    }
+    .outward-return-filter  .detail-row .dataReturn ul {
+        padding: 0 8px;
+    }
+}
+@media(max-width:574px)
+{
+    .data-table-container .data-header-block .right-tble-header-block
+    {
+        display: flex;
+    }
+    .data-table-container .btn-outward-cust
+    {
+        margin-bottom: 0;
+    }
+}
